@@ -832,13 +832,67 @@ section p {
 
 .hostPartySection {
   background-color: #111010;
+  padding: 5rem 4rem;
 }
 
 .hostPartySection .contentContainer {
   text-align: center;
-  padding: 5rem 4rem;
 }
 
 .hostPartySection .contentContainer h2 {
   color: #ff8327;
+}
+
+.pintSection .imageContainer {
+  width: 100%;
+}
+
+.eventsSection {
+  padding: 5rem 4rem;
+}
+
+.eventsSection .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.eventsSection .imgBox {
+  width: 25%;
+  background-color: #ff8327;
+}
+
+.eventsSection .imgBox img {
+  position: relative;
+  top: -2.5rem;
+  right: -2.5rem;
+}
+
+.eventsSection .textBox {
+  width: 65%;
+}
+
+.gallerySection {
+  background-color: #220303;
+  padding: 5rem 4rem;
+}
+
+.gallerySection .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+footer {
+  height: 4.5rem;
+  text-align: center;
+}
+
+footer p {
+  line-height: 4.5rem;
 }
