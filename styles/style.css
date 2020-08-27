@@ -661,41 +661,35 @@ nav a:active, nav a:hover {
   color: #ff8327;
 }
 
-header {
-  border: solid 1px orangered;
+.homeHeader {
   height: 100vh;
 }
 
-header * {
-  border: solid 1px orangered;
-}
-
-header .headerContent {
+.homeHeader .headerContent {
   height: 100%;
   background-image: url("../../bar-final-assets/home-image-1.jpg");
 }
 
-header .topBar {
+.homeHeader .topBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header h1 {
+.homeHeader h1 {
   font-family: "Tulpen One", cursive;
   font-size: 26.14rem;
   color: #ff8327;
   margin: 0;
 }
 
-header h3 {
+.homeHeader h3 {
   font-size: 8.32rem;
   font-family: "Chathura", sans-serif, sans-serif;
   font-weight: 700;
 }
 
-header .feature {
-  border: solid 1px yellow;
+.homeHeader .feature {
   text-align: center;
   height: 100%;
   display: -webkit-box;
@@ -891,8 +885,26 @@ section p {
 footer {
   height: 4.5rem;
   text-align: center;
+  background-color: #2c2c2c;
 }
 
 footer p {
   line-height: 4.5rem;
+}
+
+.blog {
+  height: 500rem;
+}
+
+.blog h2 {
+  font-size: 8.32rem;
+  font-family: "Chathura", sans-serif, sans-serif;
+  font-weight: 700;
+}
+
+.blog header {
+  height: 50vh;
+  background-image: url(../../bar-final-assets/blog-header-1.jpg);
+  background-attachment: scroll;
+  background-size: contain;
 }

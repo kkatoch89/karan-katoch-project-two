@@ -1,0 +1,14 @@
+.blog {
+  height: 500rem;
+
+  h2 {
+    @include subHeaderFont(8.32);
+  }
+
+  header {
+    height: 50vh;
+    background-image: url(../../bar-final-assets/blog-header-1.jpg);
+    background-attachment: scroll;
+    background-size: contain;
+  }
+}

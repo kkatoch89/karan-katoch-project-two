@@ -1,9 +1,9 @@
-header {
-  * {
-    @include devBorder(orangered);
-  }
+.homeHeader {
+  // * {
+  //   @include devBorder(orangered);
+  // }
 
-  @include devBorder(orangered);
+  // @include devBorder(orangered);
   height: 100vh;
 
   .headerContent {
@@ -27,7 +27,7 @@ header {
   }
 
   .feature {
-    @include devBorder(yellow);
+    // @include devBorder(yellow);
     text-align: center;
     height: 100%;
     display: flex;
