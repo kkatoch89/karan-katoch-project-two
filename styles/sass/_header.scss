@@ -1,0 +1,37 @@
+header {
+  * {
+    @include devBorder(orangered);
+  }
+
+  @include devBorder(orangered);
+  height: 100vh;
+
+  .headerContent {
+    height: 100%;
+    background-image: url("../../bar-final-assets/home-image-1.jpg");
+  }
+
+  .topBar {
+    display: flex;
+  }
+
+  h1 {
+    font-family: "Tulpen One", cursive;
+    font-size: 26.14rem;
+    color: #ff8327;
+    margin: 0;
+  }
+
+  h3 {
+    @include subHeaderFont(8.32);
+  }
+
+  .feature {
+    @include devBorder(yellow);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

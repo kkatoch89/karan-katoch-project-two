@@ -1,0 +1,37 @@
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  font-size: 1.8rem;
+}
+
+body {
+  background-color: $backgroundColorPrimary;
+}
+
+h2,
+h3,
+p,
+a,
+i {
+  color: white;
+  font-family: $baseFont;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-weight: 400;
+  font-size: 3.9rem;
+  letter-spacing: 1.9px;
+}
+
+img {
+  width: 100%;
+}
