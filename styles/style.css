@@ -584,6 +584,11 @@ html {
   font-size: 62.5%;
 }
 
+.outerWrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
 .wrapper {
   max-width: 1360px;
   margin: 0 auto;
@@ -604,6 +609,12 @@ i {
   font-family: "Chathura", sans-serif;
 }
 
+h2 {
+  font-size: 6.8rem;
+  font-family: "Chathura", sans-serif, sans-serif;
+  font-weight: 700;
+}
+
 a {
   text-decoration: none;
 }
@@ -612,6 +623,7 @@ p {
   font-weight: 400;
   font-size: 3.9rem;
   letter-spacing: 1.9px;
+  line-height: 3rem;
 }
 
 img {
@@ -893,18 +905,111 @@ footer p {
 }
 
 .blog {
-  height: 500rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "main" "footer";
+  margin: 0 auto;
 }
 
-.blog h2 {
+.blog img {
+  width: 100%;
+}
+
+.blog header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background-image: url(../../bar-final-assets/blog-header-1.jpg);
+  background-attachment: scroll;
+  background-size: contain;
+  height: 50rem;
+}
+
+.blog header h2 {
   font-size: 8.32rem;
   font-family: "Chathura", sans-serif, sans-serif;
   font-weight: 700;
 }
 
-.blog header {
-  height: 50vh;
-  background-image: url(../../bar-final-assets/blog-header-1.jpg);
-  background-attachment: scroll;
-  background-size: contain;
+.blog .mainGrid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "aside mainContent" "aside mainContent" ". mainContent";
+  gap: 8rem;
+}
+
+.blog .mainGrid a,
+.blog .mainGrid .dateText {
+  font-weight: 400;
+  font-size: 3.9rem;
+  letter-spacing: 1.9px;
+  color: #ff8327;
+}
+
+.blog .mainGrid .mainContent {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: mainContent;
+}
+
+.blog .mainGrid .mainContent .textBox {
+  padding: 6rem;
+}
+
+.blog .mainGrid .mainContent .menuSection {
+  border: solid 4px #ff8327;
+  border-right: none;
+  position: relative;
+  top: -8rem;
+}
+
+.blog .mainGrid .mainContent .menuSection img {
+  position: relative;
+  right: -2.2rem;
+  top: -2.2rem;
+  -webkit-box-shadow: -2.2rem 2.2rem 0px 0px #ff8327;
+  box-shadow: -2.2rem 2.2rem 0px 0px #ff8327;
+}
+
+.blog .mainGrid .mainContent .commentFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.blog .mainGrid .mainContent .commentFlex .textBox {
+  padding-top: 0;
+}
+
+.blog .mainGrid .mainContent .commentFlex .imgBox {
+  width: 250px;
+  margin-right: -4rem;
+}
+
+.blog .mainGrid aside {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: aside;
+  background-color: #220303;
+  padding: 3rem;
+}
+
+.blog .mainGrid ul {
+  list-style: initial;
+}
+
+.blog .mainGrid footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
 }

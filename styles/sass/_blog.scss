@@ -1,14 +1,99 @@
 .blog {
-  height: 500rem;
-
-  h2 {
-    @include subHeaderFont(8.32);
+  // height: 500rem;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  margin: 0 auto;
+  img {
+    width: 100%;
   }
 
   header {
-    height: 50vh;
+    grid-area: header;
     background-image: url(../../bar-final-assets/blog-header-1.jpg);
     background-attachment: scroll;
     background-size: contain;
+    height: 50rem;
+    h2 {
+      @include subHeaderFont(8.32);
+    }
+  }
+
+  .mainGrid {
+    grid-area: main;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "aside mainContent"
+      "aside mainContent"
+      ". mainContent";
+    gap: 8rem;
+    // padding: 3rem;
+
+    a,
+    .dateText {
+      font-weight: 400;
+      font-size: 3.9rem;
+      letter-spacing: 1.9px;
+      color: $lightAccent;
+    }
+
+    .mainContent {
+      grid-area: mainContent;
+
+      .textBox {
+        padding: 6rem;
+      }
+
+      .menuSection {
+        border: solid 4px $lightAccent;
+        border-right: none;
+        position: relative;
+        top: -8rem;
+
+        img {
+          position: relative;
+          right: -2.2rem;
+          top: -2.2rem;
+          -webkit-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+          -moz-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+          box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+        }
+      }
+
+      .commentFlex {
+        display: flex;
+        align-items: flex-start;
+
+        .textBox {
+          padding-top: 0;
+        }
+
+        .imgBox {
+          width: 250px;
+          // height: 25rem;
+          margin-right: -4rem;
+        }
+      }
+    }
+
+    aside {
+      grid-area: aside;
+      background-color: $backgroundColorSecondary;
+      // margin: 0 3rem;
+      padding: 3rem;
+    }
+
+    ul {
+      list-style: initial;
+      // white-space: nowrap;
+    }
+
+    footer {
+      grid-area: footer;
+    }
   }
 }
