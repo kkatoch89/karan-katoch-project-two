@@ -601,7 +601,7 @@ html {
 }
 
 body {
-  background-color: #111010;
+  background-color: rgba(17, 16, 16, 0.9);
 }
 
 h2,
@@ -659,7 +659,10 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 nav li {
@@ -913,6 +916,7 @@ footer p {
 }
 
 .blog {
+  background: #111010;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -ms-grid;
@@ -921,29 +925,38 @@ footer p {
   margin: 0 auto;
 }
 
-.blog img {
-  width: 100%;
-}
-
-.blog header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-  background-image: url(../../bar-final-assets/blog-header-1.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  height: 50rem;
-}
-
-.blog header h2 {
+.blog h2 {
   font-size: 8.32rem;
   font-family: "Chathura", sans-serif, sans-serif;
   font-weight: 700;
 }
 
-.blog .features {
+.blog .blogHeader {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background-image: url(../../bar-final-assets/blog-header-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.blog .headerContent {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blog .features {
+  display: table;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 0 6rem;
 }
 
 .blog .mainFlex {
@@ -986,8 +999,9 @@ footer p {
   border: solid 4px #ff8327;
   border-right: none;
   position: relative;
-  top: -8rem;
+  top: -15rem;
   right: -2rem;
+  margin-bottom: -15rem;
 }
 
 .blog .mainFlex .mainContent .menuSection .menuContent {
@@ -1005,7 +1019,7 @@ footer p {
 }
 
 .blog .mainFlex .mainContent .commentsSection {
-  padding-bottom: 0;
+  padding: 6rem 0 0 6rem;
 }
 
 .blog .mainFlex .mainContent .commentFlex {
@@ -1060,10 +1074,16 @@ footer p {
   gap: 4rem;
 }
 
+.blog .mainFlex .mainContent form label,
+.blog .mainFlex .mainContent form input {
+  padding-left: 3rem;
+}
+
 .blog .mainFlex .mainContent form input,
 .blog .mainFlex .mainContent form textarea {
   width: 100%;
   background-color: #111010;
+  color: white;
 }
 
 .blog .mainFlex .mainContent form input {
@@ -1091,6 +1111,7 @@ footer p {
   grid-area: userComments;
   border: solid 2px #ff8327;
   padding: 3rem;
+  resize: none;
 }
 
 .blog .mainFlex .mainContent form textarea::-webkit-input-placeholder {
@@ -1118,20 +1139,19 @@ footer p {
 }
 
 .blog .mainFlex aside {
-  grid-area: aside;
   background-color: #220303;
-  width: 328px;
-  height: 880px;
+  width: 380px;
+  height: 900px;
   position: relative;
   top: 10rem;
-  left: 6rem;
+  left: 5rem;
 }
 
 .blog .mainFlex aside .imgBox {
-  width: 400px;
+  width: 420px;
   position: relative;
   top: -2rem;
-  left: -9rem;
+  left: -7rem;
 }
 
 .blog .mainFlex aside .textBox {
