@@ -1,4 +1,5 @@
 .blog {
+  // @include devBorder(orangered);
   box-sizing: border-box;
   // height: 500rem;
   display: grid;
@@ -14,27 +15,24 @@
   header {
     grid-area: header;
     background-image: url(../../bar-final-assets/blog-header-1.jpg);
+    background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: contain;
+    background-size: cover;
     height: 50rem;
     h2 {
       @include subHeaderFont(8.32);
     }
   }
 
-  .mainGrid {
+  .features {
+    height: 100%;
+  }
+
+  .mainFlex {
     grid-area: main;
-    // display: flex;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      "aside mainContent"
-      "aside mainContent"
-      ". mainContent";
-    gap: 8rem;
-    justify-items: end;
-    position: relative;
-    // padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    display: relative;
 
     a,
     .dateText {
@@ -45,7 +43,10 @@
     }
 
     .mainContent {
-      grid-area: mainContent;
+      width: 65%;
+      // padding: 3rem;
+      // position: relative;
+      // right: -2rem;
 
       .textBox,
       .commentsSection,
@@ -54,16 +55,23 @@
       }
 
       .menuSection {
+        display: grid;
+        grid-template-columns: 1fr 2.2rem;
+        grid-template-areas: "menuContent .";
         border: solid 4px $lightAccent;
         border-right: none;
         position: relative;
-        right: 0;
         top: -8rem;
+        right: -2rem;
+
+        .menuContent {
+          grid-area: menuContent;
+        }
 
         img {
           position: relative;
           right: -2.2rem;
-          top: -2.4rem;
+          top: -2.2rem;
           -webkit-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
           -moz-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
           box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
@@ -76,7 +84,6 @@
 
       .commentFlex {
         display: flex;
-        // align-items: flex-start;
         justify-content: space-between;
 
         .textBox {
@@ -162,14 +169,16 @@
       // margin: 0 3rem;
 
       width: 328px;
+      height: 880px;
       position: relative;
       top: 10rem;
+      left: 6rem;
 
       .imgBox {
-        width: 350px;
+        width: 400px;
         position: relative;
         top: -2rem;
-        left: -6rem;
+        left: -9rem;
       }
 
       .textBox {
