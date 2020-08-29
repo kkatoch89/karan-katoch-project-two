@@ -22,7 +22,8 @@ h2,
 h3,
 p,
 a,
-i {
+i,
+label {
   color: white;
   font-family: $baseFont;
 }
@@ -35,7 +36,9 @@ a {
   text-decoration: none;
 }
 
-p {
+p,
+label,
+textarea {
   font-weight: 400;
   font-size: 3.9rem;
   letter-spacing: 1.9px;

@@ -604,7 +604,8 @@ h2,
 h3,
 p,
 a,
-i {
+i,
+label {
   color: white;
   font-family: "Chathura", sans-serif;
 }
@@ -619,7 +620,9 @@ a {
   text-decoration: none;
 }
 
-p {
+p,
+label,
+textarea {
   font-weight: 400;
   font-size: 3.9rem;
   letter-spacing: 1.9px;
@@ -905,6 +908,8 @@ footer p {
 }
 
 .blog {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "header" "main" "footer";
@@ -941,6 +946,8 @@ footer p {
       grid-template-columns: 1fr 2fr;
       grid-template-areas: "aside mainContent" "aside mainContent" ". mainContent";
   gap: 8rem;
+  justify-items: end;
+  position: relative;
 }
 
 .blog .mainGrid a,
@@ -958,7 +965,9 @@ footer p {
   grid-area: mainContent;
 }
 
-.blog .mainGrid .mainContent .textBox {
+.blog .mainGrid .mainContent .textBox,
+.blog .mainGrid .mainContent .commentsSection,
+.blog .mainGrid .mainContent .formSection {
   padding: 6rem;
 }
 
@@ -966,33 +975,129 @@ footer p {
   border: solid 4px #ff8327;
   border-right: none;
   position: relative;
+  right: 0;
   top: -8rem;
 }
 
 .blog .mainGrid .mainContent .menuSection img {
   position: relative;
   right: -2.2rem;
-  top: -2.2rem;
+  top: -2.4rem;
   -webkit-box-shadow: -2.2rem 2.2rem 0px 0px #ff8327;
   box-shadow: -2.2rem 2.2rem 0px 0px #ff8327;
+}
+
+.blog .mainGrid .mainContent .commentsSection {
+  padding-bottom: 0;
 }
 
 .blog .mainGrid .mainContent .commentFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .blog .mainGrid .mainContent .commentFlex .textBox {
   padding-top: 0;
+  padding-left: 2rem;
+  width: 100%;
+}
+
+.blog .mainGrid .mainContent .commentFlex .textBox h3 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.blog .mainGrid .mainContent .commentFlex .imgBox1 {
+  background: url(../../bar-final-assets/comment-image-1.jpg);
+}
+
+.blog .mainGrid .mainContent .commentFlex .imgBox2 {
+  background: url(../../bar-final-assets/comment-image-2.jpg);
 }
 
 .blog .mainGrid .mainContent .commentFlex .imgBox {
-  width: 250px;
-  margin-right: -4rem;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem 0 1rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blog .mainGrid .mainContent .formSection {
+  padding-top: 0;
+}
+
+.blog .mainGrid .mainContent form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 30rem;
+      grid-template-rows: auto 30rem;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "userName userEmail" "userComments userComments";
+  gap: 4rem;
+}
+
+.blog .mainGrid .mainContent form input,
+.blog .mainGrid .mainContent form textarea {
+  width: 100%;
+  background-color: #111010;
+}
+
+.blog .mainGrid .mainContent form input {
+  height: 4rem;
+  border: none;
+  border-bottom: solid 2px #ff8327;
+}
+
+.blog .mainGrid .mainContent form .userNameBox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: userName;
+}
+
+.blog .mainGrid .mainContent form .userEmailBox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: userEmail;
+}
+
+.blog .mainGrid .mainContent form textarea {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: userComments;
+  border: solid 2px #ff8327;
+  padding: 3rem;
+}
+
+.blog .mainGrid .mainContent form textarea::-webkit-input-placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
+}
+
+.blog .mainGrid .mainContent form textarea:-ms-input-placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
+}
+
+.blog .mainGrid .mainContent form textarea::-ms-input-placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
+}
+
+.blog .mainGrid .mainContent form textarea::placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
 }
 
 .blog .mainGrid aside {
@@ -1001,10 +1106,23 @@ footer p {
   -ms-grid-column: 1;
   grid-area: aside;
   background-color: #220303;
-  padding: 3rem;
+  width: 328px;
+  position: relative;
+  top: 10rem;
 }
 
-.blog .mainGrid ul {
+.blog .mainGrid aside .imgBox {
+  width: 350px;
+  position: relative;
+  top: -2rem;
+  left: -6rem;
+}
+
+.blog .mainGrid aside .textBox {
+  margin: 2.5rem;
+}
+
+.blog .mainGrid aside ul {
   list-style: initial;
 }
 

@@ -22,13 +22,13 @@
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
-          <div class="feature"><h2>Blog</h2></div>
+          <h2>Blog</h2>
         </div>
       </header>
       <main>
-          <div class="mainGrid">
+          <div class="wrapper mainGrid">
             <aside>
-                <div class="imageBox">
+                <div class="imgBox">
                   <img
                     src="./bar-final-assets/sidebar-image.jpg"
                     alt="A pint of lager being poured."
@@ -93,11 +93,11 @@
             <section class="commentsSection">
               <h2>Comments:</h2>
               <div class="commentFlex">
-                <div class="imgBox">
-                  <img
+                <div class="imgBox imgBox1">
+                  <!-- <img
                     src="./bar-final-assets/comment-image-1.jpg"
                     alt="Lady in a white top."
-                  />
+                  /> -->
                 </div>
                 <div class="textBox">
                   <h3 class="dateText"><time datetime="2020-10-09">
@@ -112,14 +112,14 @@
                 </div>
               </div>
               <div class="commentFlex">
-                <div class="imgBox">
-                  <img
+                <div class="imgBox imgBox2">
+                  <!-- <img
                     src="./bar-final-assets/comment-image-2.jpg"
                     alt="Lady in a white top."
-                  />
+                  /> -->
                 </div>
                 <div class="textBox">
-                  <h3 class="dateText">Tuesday October 10th, 2020 by Renzo</h3>
+                  <h3 class="dateText">Wednesday October 10th, 2020 by Renzo</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, omnis
                     minus maxime a tenetur quisquam voluptatum repellat architecto,
@@ -128,16 +128,20 @@
                 </div>
               </div>
             </section>
-            <section class="form">
+            <section class="formSection">
               <form action="submit">
-                <label for="userName">Name</label>
-                <input type="text" name="userName" id="userName" />
-                <label for="userEmail">Email address</label>
+                <div class="userNameBox">
+                  <label for="userName">Name</label>
+                  <input type="text" name="userName" id="userName" />
+                </div>
+                <div class="userEmailBox">
+                  <label for="userEmail">Email address</label>
+                  <input type="email" name="userEmail" id="userEmail" />
+                </div>
                 <textarea
                   name="userComments"
                   id="userComments"
-                  cols="30"
-                  rows="10"
+                  placeholder="Comment"
                 ></textarea>
               </form>
             </section>
