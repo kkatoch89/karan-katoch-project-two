@@ -1368,6 +1368,52 @@ footer p {
   .blogBody .burgerMenu {
     display: block;
   }
+  .blogBody p,
+  .blogBody a {
+    font-size: 2.5rem;
+  }
+  .blogBody aside {
+    height: 100%;
+    padding: 6rem 0;
+  }
+  .blogBody aside .textBoxesContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blogBody aside .recentPosts {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .blogBody a,
+  .blogBody p,
+  .blogBody h3 {
+    font-size: 2rem;
+  }
+  .blogBody .commentsSection {
+    padding: 0;
+  }
+  .blogBody .mainContent .commentFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogBody .mainContent .commentFlex .imgBox {
+    margin-left: 2rem;
+  }
+  .blogBody aside .textBoxesContainer {
+    padding: 0 6rem;
+  }
+  .blogBody aside .textBox {
+    width: 100%;
+  }
 }
 
 .contactBody {

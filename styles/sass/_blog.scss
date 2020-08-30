@@ -339,5 +339,53 @@
 		.burgerMenu {
 			display: block;
 		}
+
+		p,
+		a {
+			font-size: 2.5rem;
+		}
+
+		aside {
+			height: 100%;
+			padding: 6rem 0;
+
+			.textBoxesContainer {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.recentPosts {
+				margin: 0;
+			}
+		}
+	}
+
+	@media (max-width: 450px) {
+		a,
+		p,
+		h3 {
+			font-size: 2rem;
+		}
+
+		.commentsSection {
+			padding: 0;
+		}
+
+		.mainContent .commentFlex {
+			flex-direction: column;
+
+			.imgBox {
+				margin-left: 2rem;
+			}
+		}
+
+		aside {
+			.textBoxesContainer {
+				padding: 0 6rem;
+			}
+			.textBox {
+				width: 100%;
+			}
+		}
 	}
 }
