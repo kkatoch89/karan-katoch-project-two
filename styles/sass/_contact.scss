@@ -27,7 +27,7 @@
 	}
 
 	.contactMain {
-		@include devBorder(yellow);
+		// @include devBorder(yellow);
 		// grid-area: contactMain;
 		height: 50vh;
 		display: flex;
@@ -74,6 +74,10 @@
 
 			a {
 				font-size: 2rem;
+
+				#{$aTagsHover} {
+					color: $lightAccent;
+				}
 			}
 		}
 	}

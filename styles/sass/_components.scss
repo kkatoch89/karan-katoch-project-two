@@ -34,6 +34,7 @@ form {
 	textarea {
 		width: 100%;
 		color: white;
+		font-size: 2.5rem;
 	}
 
 	.userNameBox {
@@ -56,6 +57,7 @@ form {
 
 		&::placeholder {
 			font-family: $baseFont;
+			font-size: 3.9rem;
 			color: white;
 			opacity: 1;
 		}
@@ -68,5 +70,9 @@ form {
 		display: block;
 		width: 100%;
 		text-align: center;
+
+		#{$aTagsHover} {
+			background-color: $darkAccent;
+		}
 	}
 }

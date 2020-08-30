@@ -1,15 +1,15 @@
-.blog {
+.blogBody {
 	// @include devBorder(orangered);
-	background: $backgroundColorPrimary;
-
-	box-sizing: border-box;
-	// height: 500rem;
-	display: grid;
-	grid-template-areas:
-		"header"
-		"main"
-		"footer";
-	margin: 0 auto;
+	.outerWrapper {
+		box-sizing: border-box;
+		// height: 500rem;
+		// display: grid;
+		// grid-template-areas:
+		// 	"header"
+		// 	"main"
+		// 	"footer";
+		margin: 0 auto;
+	}
 
 	h2 {
 		@include subHeaderFont(8.32);
@@ -30,7 +30,6 @@
 	}
 
 	.features {
-		// height: 100%;
 		display: table;
 		align-items: center;
 		padding: 0 0 0 6rem;
@@ -42,137 +41,113 @@
 		display: flex;
 		justify-content: space-between;
 		display: relative;
+	}
 
-		a,
-		.dateText {
-			font-weight: 400;
-			font-size: 3.9rem;
-			letter-spacing: 1.9px;
-			color: $lightAccent;
+	a,
+	.dateText {
+		font-weight: 400;
+		font-size: 3.9rem;
+		letter-spacing: 1.9px;
+	}
+
+	.dateText {
+		color: $lightAccent;
+	}
+
+	.mainContent {
+		width: 65%;
+		position: relative;
+		top: -15rem;
+
+		.textBox,
+		.commentsSection,
+		.formSection {
+			padding: 6rem;
 		}
 
-		.mainContent {
-			width: 65%;
-			// padding: 3rem;
-			// position: relative;
-			// right: -2rem;
+		.menuSection {
+			display: grid;
+			grid-template-columns: 1fr 2.2rem;
+			grid-template-areas: "menuContent .";
+			border: solid 4px $lightAccent;
+			border-right: none;
+			position: relative;
+			// top: -15rem;
+			right: -2rem;
+			// margin-bottom: -15rem;
 
-			.textBox,
-			.commentsSection,
-			.formSection {
-				padding: 6rem;
+			.menuContent {
+				grid-area: menuContent;
 			}
 
-			.menuSection {
-				display: grid;
-				grid-template-columns: 1fr 2.2rem;
-				grid-template-areas: "menuContent .";
-				border: solid 4px $lightAccent;
-				border-right: none;
+			img {
 				position: relative;
-				top: -15rem;
-				right: -2rem;
-				margin-bottom: -15rem;
-
-				.menuContent {
-					grid-area: menuContent;
-				}
-
-				img {
-					position: relative;
-					right: -2.2rem;
-					top: -2.2rem;
-					-webkit-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
-					-moz-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
-					box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
-				}
+				right: -2.2rem;
+				top: -2.2rem;
+				-webkit-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+				-moz-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+				box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
 			}
+		}
 
-			.commentsSection {
-				padding: 6rem 0 0 6rem;
-			}
+		.commentsSection {
+			padding: 6rem 0 0 6rem;
+		}
 
-			.commentFlex {
-				display: flex;
-				justify-content: space-between;
+		.commentFlex {
+			display: flex;
+			justify-content: space-between;
 
-				.textBox {
-					padding-top: 0;
-					padding-left: 2rem;
-					width: 100%;
-
-					h3 {
-						display: inline-block;
-						vertical-align: top;
-					}
-				}
-
-				.imgBox1 {
-					background: url(../../bar-final-assets/comment-image-1.jpg);
-				}
-
-				.imgBox2 {
-					background: url(../../bar-final-assets/comment-image-2.jpg);
-				}
-
-				.imgBox {
-					width: 10rem;
-					height: 10rem;
-					margin: 1rem 0 1rem 0;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-			}
-
-			.formSection {
+			.textBox {
 				padding-top: 0;
+				padding-left: 2rem;
+				width: 100%;
+
+				h3 {
+					display: inline-block;
+					vertical-align: top;
+				}
 			}
 
-			form {
-				// width: 100%;
-				// display: grid;
-				// grid-template-rows: auto 30rem;
-				// grid-template-columns: 1fr 1fr;
-				// grid-template-areas:
-				//   "userName userEmail"
-				//   "userComments userComments";
-				// gap: 4rem;
-				// // row-gap: 2rem;
+			.imgBox1 {
+				background: url(../../bar-final-assets/comment-image-1.jpg);
+			}
 
-				input,
-				textarea {
-					background-color: $backgroundColorPrimary;
-				}
+			.imgBox2 {
+				background: url(../../bar-final-assets/comment-image-2.jpg);
+			}
 
-				input {
-					border-bottom: solid 2px $lightAccent;
-				}
+			.imgBox {
+				width: 10rem;
+				height: 10rem;
+				margin: 1rem 0 1rem 0;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		}
 
-				// .userNameBox {
-				//   grid-area: userName;
-				// }
+		.formSection {
+			padding-top: 0;
+		}
 
-				// .userEmailBox {
-				//   grid-area: userEmail;
-				// }
+		form {
+			input,
+			textarea {
+				background-color: $backgroundColorPrimary;
+			}
 
-				textarea {
-					border: solid 2px $lightAccent;
-				}
+			input {
+				border-bottom: solid 2px $lightAccent;
+			}
 
-				//   &::placeholder {
-				//     font-family: $baseFont;
-				//     color: white;
-				//     opacity: 1;
-				//   }
+			textarea {
+				border: solid 2px $lightAccent;
 			}
 		}
 	}
 
 	aside {
 		background-color: $backgroundColorSecondary;
-		// margin: 0 3rem;
-		// display: grid;
 
 		width: 380px;
 		height: 900px;
@@ -193,55 +168,78 @@
 
 		a {
 			line-height: 3rem;
+			color: $lightAccent;
+
+			#{$aTagsHover} {
+				color: white;
+			}
 		}
 
 		.textBox {
 			margin: 2.5rem;
-
-			& a:first-of-type {
-				&:hover,
-				&:focus {
-					color: white;
-				}
-			}
 		}
 
 		ul {
 			list-style: none;
+		}
 
+		li {
+			padding-left: 2rem;
+			position: relative;
+
+			&::before {
+				content: "\2022";
+				color: $darkAccent;
+				font-weight: 700;
+				line-height: 3rem;
+				display: inline-block;
+				width: 1em;
+				position: absolute;
+				left: -5px;
+			}
+
+			&:hover,
+			&:focus {
+				&::before {
+					color: white;
+					font-size: 3rem;
+				}
+			}
 			a {
 				color: white;
 
-				&:hover,
-				&:focus {
+				#{$aTagsHover} {
 					color: $lightAccent;
-
-					&:before {
-						color: white;
-						font-size: 3rem;
-					}
-				}
-			}
-
-			li {
-				padding-left: 2rem;
-				position: relative;
-
-				&::before {
-					content: "\2022";
-					color: $darkAccent;
-					font-weight: 700;
-					line-height: 3rem;
-					display: inline-block;
-					width: 1em;
-					position: absolute;
-					left: -5px;
 				}
 			}
 		}
 	}
-}
+	footer {
+		grid-area: footer;
+	}
 
-footer {
-	grid-area: footer;
+	// MEDIA QUERIES
+	@media (max-width: 1200px) {
+		aside {
+			left: 0;
+		}
+	}
+
+	@media (max-width: 940px) {
+		.blogHeader {
+			height: 200px;
+		}
+
+		.mainFlex {
+			flex-direction: column-reverse;
+		}
+
+		.mainContent {
+			width: 100%;
+		}
+
+		.menuSection {
+			top: 0;
+		}
+	}
 }

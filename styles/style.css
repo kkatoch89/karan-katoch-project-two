@@ -598,6 +598,7 @@ html {
 
 .outerWrapper {
   max-width: 1400px;
+  background: #111010;
 }
 
 body {
@@ -608,7 +609,6 @@ h2,
 h3,
 p,
 a,
-i,
 label {
   color: white;
   font-family: "Chathura", sans-serif;
@@ -680,6 +680,7 @@ form input,
 form textarea {
   width: 100%;
   color: white;
+  font-size: 2.5rem;
 }
 
 form .userNameBox {
@@ -710,24 +711,28 @@ form textarea {
 
 form textarea::-webkit-input-placeholder {
   font-family: "Chathura", sans-serif;
+  font-size: 3.9rem;
   color: white;
   opacity: 1;
 }
 
 form textarea:-ms-input-placeholder {
   font-family: "Chathura", sans-serif;
+  font-size: 3.9rem;
   color: white;
   opacity: 1;
 }
 
 form textarea::-ms-input-placeholder {
   font-family: "Chathura", sans-serif;
+  font-size: 3.9rem;
   color: white;
   opacity: 1;
 }
 
 form textarea::placeholder {
   font-family: "Chathura", sans-serif;
+  font-size: 3.9rem;
   color: white;
   opacity: 1;
 }
@@ -742,6 +747,10 @@ form button {
   display: block;
   width: 100%;
   text-align: center;
+}
+
+form button:active, form button:hover {
+  background-color: #bf2603;
 }
 
 nav ul {
@@ -1008,25 +1017,19 @@ footer p {
   line-height: 4.5rem;
 }
 
-.blog {
-  background: #111010;
+.blogBody .outerWrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "header" "main" "footer";
   margin: 0 auto;
 }
 
-.blog h2 {
+.blogBody h2 {
   font-size: 8.32rem;
   font-family: "Chathura", sans-serif, sans-serif;
   font-weight: 700;
 }
 
-.blog .blogHeader {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
+.blogBody .blogHeader {
   grid-area: header;
   background-image: url(../../bar-final-assets/blog-header-1.jpg);
   background-repeat: no-repeat;
@@ -1034,7 +1037,7 @@ footer p {
   height: 400px;
 }
 
-.blog .headerContent {
+.blogBody .headerContent {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1044,7 +1047,7 @@ footer p {
           align-items: center;
 }
 
-.blog .features {
+.blogBody .features {
   display: table;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1052,9 +1055,7 @@ footer p {
   padding: 0 0 0 6rem;
 }
 
-.blog .mainFlex {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+.blogBody .mainFlex {
   grid-area: main;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1065,25 +1066,30 @@ footer p {
   display: relative;
 }
 
-.blog .mainFlex a,
-.blog .mainFlex .dateText {
+.blogBody a,
+.blogBody .dateText {
   font-weight: 400;
   font-size: 3.9rem;
   letter-spacing: 1.9px;
+}
+
+.blogBody .dateText {
   color: #ff8327;
 }
 
-.blog .mainFlex .mainContent {
+.blogBody .mainContent {
   width: 65%;
+  position: relative;
+  top: -15rem;
 }
 
-.blog .mainFlex .mainContent .textBox,
-.blog .mainFlex .mainContent .commentsSection,
-.blog .mainFlex .mainContent .formSection {
+.blogBody .mainContent .textBox,
+.blogBody .mainContent .commentsSection,
+.blogBody .mainContent .formSection {
   padding: 6rem;
 }
 
-.blog .mainFlex .mainContent .menuSection {
+.blogBody .mainContent .menuSection {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2.2rem;
@@ -1092,18 +1098,16 @@ footer p {
   border: solid 4px #ff8327;
   border-right: none;
   position: relative;
-  top: -15rem;
   right: -2rem;
-  margin-bottom: -15rem;
 }
 
-.blog .mainFlex .mainContent .menuSection .menuContent {
+.blogBody .mainContent .menuSection .menuContent {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: menuContent;
 }
 
-.blog .mainFlex .mainContent .menuSection img {
+.blogBody .mainContent .menuSection img {
   position: relative;
   right: -2.2rem;
   top: -2.2rem;
@@ -1111,11 +1115,11 @@ footer p {
   box-shadow: -2.2rem 2.2rem 0px 0px #ff8327;
 }
 
-.blog .mainFlex .mainContent .commentsSection {
+.blogBody .mainContent .commentsSection {
   padding: 6rem 0 0 6rem;
 }
 
-.blog .mainFlex .mainContent .commentFlex {
+.blogBody .mainContent .commentFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1124,26 +1128,26 @@ footer p {
           justify-content: space-between;
 }
 
-.blog .mainFlex .mainContent .commentFlex .textBox {
+.blogBody .mainContent .commentFlex .textBox {
   padding-top: 0;
   padding-left: 2rem;
   width: 100%;
 }
 
-.blog .mainFlex .mainContent .commentFlex .textBox h3 {
+.blogBody .mainContent .commentFlex .textBox h3 {
   display: inline-block;
   vertical-align: top;
 }
 
-.blog .mainFlex .mainContent .commentFlex .imgBox1 {
+.blogBody .mainContent .commentFlex .imgBox1 {
   background: url(../../bar-final-assets/comment-image-1.jpg);
 }
 
-.blog .mainFlex .mainContent .commentFlex .imgBox2 {
+.blogBody .mainContent .commentFlex .imgBox2 {
   background: url(../../bar-final-assets/comment-image-2.jpg);
 }
 
-.blog .mainFlex .mainContent .commentFlex .imgBox {
+.blogBody .mainContent .commentFlex .imgBox {
   width: 10rem;
   height: 10rem;
   margin: 1rem 0 1rem 0;
@@ -1151,24 +1155,24 @@ footer p {
   background-repeat: no-repeat;
 }
 
-.blog .mainFlex .mainContent .formSection {
+.blogBody .mainContent .formSection {
   padding-top: 0;
 }
 
-.blog .mainFlex .mainContent form input,
-.blog .mainFlex .mainContent form textarea {
+.blogBody .mainContent form input,
+.blogBody .mainContent form textarea {
   background-color: #111010;
 }
 
-.blog .mainFlex .mainContent form input {
+.blogBody .mainContent form input {
   border-bottom: solid 2px #ff8327;
 }
 
-.blog .mainFlex .mainContent form textarea {
+.blogBody .mainContent form textarea {
   border: solid 2px #ff8327;
 }
 
-.blog aside {
+.blogBody aside {
   background-color: #220303;
   width: 380px;
   height: 900px;
@@ -1177,52 +1181,40 @@ footer p {
   left: 5rem;
 }
 
-.blog aside .imgBox {
+.blogBody aside .imgBox {
   width: 420px;
   position: relative;
   top: -2rem;
   left: -7rem;
 }
 
-.blog aside p {
+.blogBody aside p {
   margin-bottom: 1rem;
 }
 
-.blog aside a {
+.blogBody aside a {
   line-height: 3rem;
-}
-
-.blog aside .textBox {
-  margin: 2.5rem;
-}
-
-.blog aside .textBox a:first-of-type:hover, .blog aside .textBox a:first-of-type:focus {
-  color: white;
-}
-
-.blog aside ul {
-  list-style: none;
-}
-
-.blog aside ul a {
-  color: white;
-}
-
-.blog aside ul a:hover, .blog aside ul a:focus {
   color: #ff8327;
 }
 
-.blog aside ul a:hover:before, .blog aside ul a:focus:before {
+.blogBody aside a:active, .blogBody aside a:hover {
   color: white;
-  font-size: 3rem;
 }
 
-.blog aside ul li {
+.blogBody aside .textBox {
+  margin: 2.5rem;
+}
+
+.blogBody aside ul {
+  list-style: none;
+}
+
+.blogBody aside li {
   padding-left: 2rem;
   position: relative;
 }
 
-.blog aside ul li::before {
+.blogBody aside li::before {
   content: "\2022";
   color: #bf2603;
   font-weight: 700;
@@ -1233,10 +1225,45 @@ footer p {
   left: -5px;
 }
 
-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+.blogBody aside li:hover::before, .blogBody aside li:focus::before {
+  color: white;
+  font-size: 3rem;
+}
+
+.blogBody aside li a {
+  color: white;
+}
+
+.blogBody aside li a:active, .blogBody aside li a:hover {
+  color: #ff8327;
+}
+
+.blogBody footer {
   grid-area: footer;
+}
+
+@media (max-width: 1200px) {
+  .blogBody aside {
+    left: 0;
+  }
+}
+
+@media (max-width: 940px) {
+  .blogBody .blogHeader {
+    height: 200px;
+  }
+  .blogBody .mainFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .blogBody .mainContent {
+    width: 100%;
+  }
+  .blogBody .menuSection {
+    top: 0;
+  }
 }
 
 .innerWrapper {
@@ -1265,7 +1292,6 @@ footer {
 }
 
 .contactBody .contactMain {
-  border: solid 1px yellow;
   height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1326,8 +1352,10 @@ footer {
   font-size: 2rem;
 }
 
+.contactBody .contactInfoSection .socialMedia a:active, .contactBody .contactInfoSection .socialMedia a:hover {
+  color: #ff8327;
+}
+
 .contactBody footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: footer;
 }

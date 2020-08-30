@@ -16,6 +16,7 @@ html {
 
 .outerWrapper {
 	max-width: 1400px;
+	background: $backgroundColorPrimary;
 }
 
 body {
@@ -26,7 +27,6 @@ h2,
 h3,
 p,
 a,
-i,
 label {
 	color: white;
 	font-family: $baseFont;
