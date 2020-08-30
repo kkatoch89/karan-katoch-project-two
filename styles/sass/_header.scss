@@ -1,37 +1,52 @@
 .homeHeader {
-  // * {
-  //   @include devBorder(orangered);
-  // }
+	// * {
+	//   @include devBorder(orangered);
+	// }
+	position: relative;
 
-  // @include devBorder(orangered);
-  height: 100vh;
+	// @include devBorder(orangered);
+	height: 100vh;
 
-  .headerContent {
-    height: 100%;
-    background-image: url("../../bar-final-assets/home-image-1.jpg");
-  }
+	.headerContent {
+		height: 100%;
+		background-image: url("../../bar-final-assets/home-image-1.jpg");
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-  .topBar {
-    display: flex;
-  }
+	h1 {
+		font-family: "Tulpen One", cursive;
+		font-size: 26.14rem;
+		color: #ff8327;
+		margin: 0;
+	}
 
-  h1 {
-    font-family: "Tulpen One", cursive;
-    font-size: 26.14rem;
-    color: #ff8327;
-    margin: 0;
-  }
+	h3 {
+		@include subHeaderFont(8.32);
+		position: relative;
+		top: -6rem;
+		left: 1rem;
+	}
 
-  h3 {
-    @include subHeaderFont(8.32);
-  }
+	.feature {
+		// @include devBorder(yellow);
+		text-align: center;
+		// height: 100%;
+		// width: 390px;
+		text-align: left;
+		z-index: 10;
+		padding-top: 4rem;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
+	}
 
-  .feature {
-    // @include devBorder(yellow);
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+	.offsetImg {
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
 }

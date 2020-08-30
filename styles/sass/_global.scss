@@ -11,7 +11,7 @@ html {
 }
 
 .outerWrapper {
-	max-width: 1360px;
+	max-width: 1400px;
 	margin: 0 auto;
 	background: $backgroundColorPrimary;
 }
@@ -34,6 +34,10 @@ a,
 label {
 	color: white;
 	font-family: $baseFont;
+}
+
+i {
+	color: white;
 }
 
 h2 {

@@ -1,164 +1,188 @@
 // SECTIONS GENERAL STYLING
-section {
-  h2 {
-    @include subHeaderFont(5.8);
-    letter-spacing: 2.2px;
-  }
+.homeBody {
+	section {
+		h2 {
+			@include subHeaderFont(5.8);
+			letter-spacing: 2.2px;
+		}
 
-  p {
-    margin: 1rem 0 3rem;
-  }
-}
+		p {
+			margin: 1rem 0 3rem;
+		}
+	}
 
-// SERVICES SECTION (1ST)
-.servicesSection {
-  padding: 10rem 0;
-  .servicesContainer {
-    @include devBorder(lightblue);
-    display: flex;
-    flex-wrap: wrap;
-  }
+	// SERVICES SECTION (1ST)
+	.servicesSection {
+		// padding: 10rem 0;
+		.servicesContainer {
+			// @include devBorder(lightblue);
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
 
-  .serviceBox {
-    @include devBorder(yellow);
-    flex-basis: 50%;
-    display: flex;
-    position: relative;
-  }
+	.serviceBox {
+		// @include devBorder(yellow);
+		flex-basis: 50%;
+		display: flex;
+		position: relative;
+	}
 
-  .iconBox {
-    margin: 5px 1rem;
-  }
+	.iconBox {
+		margin: 5px 1rem;
+	}
 
-  .iconStack {
-    position: relative;
-    display: inline-block;
-    width: 4.5rem;
-    height: 4.5rem;
-    line-height: 3.8rem;
-    vertical-align: middle;
+	.iconStack {
+		position: relative;
+		display: inline-block;
+		width: 4.5rem;
+		height: 4.5rem;
+		line-height: 3.8rem;
+		vertical-align: middle;
 
-    &1x,
-    &2x {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      text-align: center;
-    }
+		&1x,
+		&2x {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
 
-    &1x {
-      line-height: inherit;
-    }
+		&1x {
+			line-height: inherit;
+		}
 
-    &2x {
-      font-size: 4rem;
-      color: $darkAccent;
-    }
-  }
-}
+		&2x {
+			font-size: 4rem;
+			color: $darkAccent;
+		}
+	}
 
-// PLAN AHEAD & NEW LOCATIONS SECTION (2ND)
-.planLocationsSection {
-  background-color: $backgroundColorSecondary;
+	// PLAN AHEAD & NEW LOCATIONS SECTION (2ND)
+	.planLocationsSection {
+		background-color: $backgroundColorSecondary;
 
-  .contentContainer {
-    @include devBorder(orangered);
-  }
+		.wrapper {
+			padding: 0;
+		}
 
-  .contentBox {
-    @include devBorder(royalblue);
-    margin: 0 auto 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+		.contentContainer {
+			@include devBorder(orangered);
+		}
 
-    & > [class$="Box"] {
-      width: 45%;
-    }
-  }
+		.contentBox {
+			@include devBorder(royalblue);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 
-  .locationsBox {
-    flex-direction: row-reverse;
-    text-align: right;
+			& > [class$="Box"] {
+				width: 45%;
+			}
+		}
 
-    p {
-      text-align: left;
-    }
-  }
+		.planBox {
+			margin: 0 auto 3rem;
+		}
 
-  .imgBox {
-    @include devBorder(yellow);
-    background-color: $lightAccent;
+		.locationsBox {
+			flex-direction: row-reverse;
+			text-align: right;
 
-    img {
-      position: relative;
-    }
-  }
+			p {
+				text-align: left;
+			}
+		}
 
-  .planBox img {
-    top: -2.5rem;
-    left: -2.5rem;
-  }
+		.imgBox {
+			@include devBorder(yellow);
+			background-color: $lightAccent;
+			position: relative;
+			top: 5rem;
 
-  .locationsBox img {
-    top: -2.5rem;
-    right: -2.5rem;
-  }
-}
+			img {
+				position: relative;
+			}
+		}
 
-// HOST PARTY SECTION (3RD)
-.hostPartySection {
-  background-color: $backgroundColorPrimary;
-  padding: 5rem 4rem;
+		.planBox img {
+			top: -$imgOffset;
+			left: -$imgOffset;
+		}
 
-  .contentContainer {
-    text-align: center;
+		.locationsBox img {
+			top: -$imgOffset;
+			right: -$imgOffset;
+		}
+	}
 
-    h2 {
-      color: $lightAccent;
-    }
-  }
-}
+	// HOST PARTY SECTION (3RD)
+	.hostPartySection {
+		background-color: $backgroundColorPrimary;
+		padding: 5rem 4rem;
 
-// PINT IMAGE SECTION (4TH)
-.pintSection {
-  .imageContainer {
-    width: 100%;
-  }
-}
+		.contentContainer {
+			text-align: center;
 
-// EVENTS SECTION (5TH)
-.eventsSection {
-  padding: 5rem 4rem;
-  .contentContainer {
-    display: flex;
-    justify-content: space-between;
-  }
+			h2 {
+				color: $lightAccent;
+			}
+		}
+	}
 
-  .imgBox {
-    width: 25%;
-    background-color: $lightAccent;
+	// PINT IMAGE SECTION (4TH)
+	.pintSection {
+		.imageContainer {
+			width: 100%;
+		}
+	}
 
-    img {
-      position: relative;
-      top: -2.5rem;
-      right: -2.5rem;
-    }
-  }
+	// EVENTS SECTION (5TH)
+	.eventsSection {
+		padding: 5rem 4rem;
+		.contentContainer {
+			display: flex;
+			justify-content: space-between;
+		}
 
-  .textBox {
-    width: 65%;
-  }
-}
+		.imgBox {
+			width: 25%;
+			background-color: $lightAccent;
 
-// GALLERY SECTION (6TH)
-.gallerySection {
-  background-color: $backgroundColorSecondary;
-  padding: 5rem 4rem;
+			img {
+				position: relative;
+				top: -$imgOffset;
+				right: -$imgOffset;
+			}
+		}
 
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-  }
+		.textBox {
+			width: 65%;
+		}
+	}
+
+	// GALLERY SECTION (6TH)
+	.gallerySection {
+		background-color: $backgroundColorSecondary;
+		padding: 5rem 4rem;
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 3rem;
+		}
+
+		li {
+			overflow: hidden;
+
+			img {
+				transition: all 0.5s ease;
+			}
+
+			#{$aTagsHover} img {
+				transform: scale(1.2);
+				opacity: 0.7;
+			}
+		}
+	}
 }

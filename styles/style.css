@@ -593,7 +593,7 @@ html {
 }
 
 .outerWrapper {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
   background: #111010;
 }
@@ -616,6 +616,10 @@ a,
 label {
   color: white;
   font-family: "Chathura", sans-serif;
+}
+
+i {
+  color: white;
 }
 
 h2 {
@@ -804,18 +808,23 @@ nav a:active, nav a:hover {
 }
 
 .homeHeader {
+  position: relative;
   height: 100vh;
 }
 
 .homeHeader .headerContent {
   height: 100%;
   background-image: url("../../bar-final-assets/home-image-1.jpg");
-}
-
-.homeHeader .topBar {
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .homeHeader h1 {
@@ -829,40 +838,37 @@ nav a:active, nav a:hover {
   font-size: 8.32rem;
   font-family: "Chathura", sans-serif, sans-serif;
   font-weight: 700;
+  position: relative;
+  top: -6rem;
+  left: 1rem;
 }
 
 .homeHeader .feature {
   text-align: center;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: left;
+  z-index: 10;
+  padding-top: 4rem;
 }
 
-section h2 {
+.homeHeader .offsetImg {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.homeBody section h2 {
   font-size: 5.8rem;
   font-family: "Chathura", sans-serif, sans-serif;
   font-weight: 700;
   letter-spacing: 2.2px;
 }
 
-section p {
+.homeBody section p {
   margin: 1rem 0 3rem;
 }
 
-.servicesSection {
-  padding: 10rem 0;
-}
-
-.servicesSection .servicesContainer {
-  border: solid 1px lightblue;
+.homeBody .servicesSection .servicesContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -870,8 +876,7 @@ section p {
       flex-wrap: wrap;
 }
 
-.servicesSection .serviceBox {
-  border: solid 1px yellow;
+.homeBody .serviceBox {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   display: -webkit-box;
@@ -880,11 +885,11 @@ section p {
   position: relative;
 }
 
-.servicesSection .iconBox {
+.homeBody .iconBox {
   margin: 5px 1rem;
 }
 
-.servicesSection .iconStack {
+.homeBody .iconStack {
   position: relative;
   display: inline-block;
   width: 4.5rem;
@@ -893,33 +898,36 @@ section p {
   vertical-align: middle;
 }
 
-.servicesSection .iconStack1x, .servicesSection .iconStack2x {
+.homeBody .iconStack1x, .homeBody .iconStack2x {
   position: absolute;
   left: 0;
   width: 100%;
   text-align: center;
 }
 
-.servicesSection .iconStack1x {
+.homeBody .iconStack1x {
   line-height: inherit;
 }
 
-.servicesSection .iconStack2x {
+.homeBody .iconStack2x {
   font-size: 4rem;
   color: #bf2603;
 }
 
-.planLocationsSection {
+.homeBody .planLocationsSection {
   background-color: #220303;
 }
 
-.planLocationsSection .contentContainer {
+.homeBody .planLocationsSection .wrapper {
+  padding: 0;
+}
+
+.homeBody .planLocationsSection .contentContainer {
   border: solid 1px orangered;
 }
 
-.planLocationsSection .contentBox {
+.homeBody .planLocationsSection .contentBox {
   border: solid 1px royalblue;
-  margin: 0 auto 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -931,11 +939,15 @@ section p {
           align-items: center;
 }
 
-.planLocationsSection .contentBox > [class$="Box"] {
+.homeBody .planLocationsSection .contentBox > [class$="Box"] {
   width: 45%;
 }
 
-.planLocationsSection .locationsBox {
+.homeBody .planLocationsSection .planBox {
+  margin: 0 auto 3rem;
+}
+
+.homeBody .planLocationsSection .locationsBox {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -943,51 +955,53 @@ section p {
   text-align: right;
 }
 
-.planLocationsSection .locationsBox p {
+.homeBody .planLocationsSection .locationsBox p {
   text-align: left;
 }
 
-.planLocationsSection .imgBox {
+.homeBody .planLocationsSection .imgBox {
   border: solid 1px yellow;
   background-color: #ff8327;
+  position: relative;
+  top: 5rem;
 }
 
-.planLocationsSection .imgBox img {
+.homeBody .planLocationsSection .imgBox img {
   position: relative;
 }
 
-.planLocationsSection .planBox img {
-  top: -2.5rem;
-  left: -2.5rem;
+.homeBody .planLocationsSection .planBox img {
+  top: -2.3rem;
+  left: -2.3rem;
 }
 
-.planLocationsSection .locationsBox img {
-  top: -2.5rem;
-  right: -2.5rem;
+.homeBody .planLocationsSection .locationsBox img {
+  top: -2.3rem;
+  right: -2.3rem;
 }
 
-.hostPartySection {
+.homeBody .hostPartySection {
   background-color: #111010;
   padding: 5rem 4rem;
 }
 
-.hostPartySection .contentContainer {
+.homeBody .hostPartySection .contentContainer {
   text-align: center;
 }
 
-.hostPartySection .contentContainer h2 {
+.homeBody .hostPartySection .contentContainer h2 {
   color: #ff8327;
 }
 
-.pintSection .imageContainer {
+.homeBody .pintSection .imageContainer {
   width: 100%;
 }
 
-.eventsSection {
+.homeBody .eventsSection {
   padding: 5rem 4rem;
 }
 
-.eventsSection .contentContainer {
+.homeBody .eventsSection .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -996,32 +1010,47 @@ section p {
           justify-content: space-between;
 }
 
-.eventsSection .imgBox {
+.homeBody .eventsSection .imgBox {
   width: 25%;
   background-color: #ff8327;
 }
 
-.eventsSection .imgBox img {
+.homeBody .eventsSection .imgBox img {
   position: relative;
-  top: -2.5rem;
-  right: -2.5rem;
+  top: -2.3rem;
+  right: -2.3rem;
 }
 
-.eventsSection .textBox {
+.homeBody .eventsSection .textBox {
   width: 65%;
 }
 
-.gallerySection {
+.homeBody .gallerySection {
   background-color: #220303;
   padding: 5rem 4rem;
 }
 
-.gallerySection .gallery {
+.homeBody .gallerySection .gallery {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+}
+
+.homeBody .gallerySection li {
+  overflow: hidden;
+}
+
+.homeBody .gallerySection li img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.homeBody .gallerySection li:active, .homeBody .gallerySection li:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.7;
 }
 
 footer {
