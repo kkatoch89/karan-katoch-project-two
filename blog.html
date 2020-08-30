@@ -1,166 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&family=Tulpen+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./bar-final-assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./bar-final-assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./bar-final-assets/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-  </head>
-  <body class= "blogBody">
-      <div class="outerWrapper">
-        <header class="blogHeader">
-          <div class=" headerContent">
-            <nav class="topBar">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a class="logo" href="#">Bar-One</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </nav>
-              <div class="features">
-                <h2>Blog</h2>
-              </div>
-          </div>
-        </header>
-        <main>
-            <div class="wrapper mainFlex">
-              <aside>
-                  <div class="imgBox">
-                    <img
-                      src="./bar-final-assets/sidebar-image.jpg"
-                      alt="A pint of lager being poured."
-                    />
-                  </div>
-                  <div class="textBox textBox1">
-                    <h2>Our mission</h2>
-                    <p>
-                      Nam dopibus nisl vitae elit fringilla rutrum. Aenean
-                      sollicitudin, erat a elementum.
-                    </p>
-                    <a href="#">Find out more.</a>
-                  </div>
-                  <div class="textBox recentPosts">
-                    <h2>Recent posts</h2>
-                    <ul>
-                      <li><a href="#">Donec fascilisis tortar ut</a></li>
-                      <li><a href="#">Augue lacinia at vlverra</a></li>
-                      <li><a href="#">Semper sed sapien metus</a></li>
-                      <li><a href="#">Scelerisque nec pharetra id</a></li>
-                    </ul>
-              </aside>
-            <div class="mainContent">
-              <section class="menuSection">
-                <div class="menuContent">
-                  <div class="imgBox">
-                    <img
-                      src="./bar-final-assets/post-image.jpg"
-                      alt="Freshly made dishes which include salad, garlic bread and soup served in white plates."
-                    />
-                  </div>
-                  <div class="wrapper textBox">
-                    <h2>New Menu!</h2>
-                    <h3 class="dateText"><time datetime="2020-01-30">
-                      Monday January 30, 2020
-                    </time> by Saran</h3>
-                    <p>
-                      Curobitur lobortis id lorem id bibendum. Ut id consectetur magna.
-                      Quisque volutpat ougue enim, pulvinar lobortis nibh lacinia at.
-                      Vestibulum nec erat ut mi sallicitudin
-                    </p>
-                    <p>
-                      Curobitur lobortis id lorem id bibendum. Ut id consectetur magna.
-                      Quisque Volupot
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-                      in, corporis reprehenderit voluptatibus voluptas praesentium quas
-                      maxime asperiores quam dolores ratione, temporibus magnam!
-                      Facilis, dolorum quia. Dolorum accusamus, aspernatur voluptate
-                      asperiores aut enim atque, fuga veniam ipsam tempora error
-                      perferendis qui quam quas nihil delectus porro? Eveniet at ut
-                      consequatur porro commodi suscipit vitae natus sit tempore. Omnis,
-                      fugit accusamus?
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                      nisi, fugit placeat nobis nihil earum veniam iusto! Vitae neque
-                      quae aspernatur veritatis aperiam non pariatur!
-                    </p>
-                  </div>
-                </div>
-              </section>
-              <section class="commentsSection">
-                <h2>Comments:</h2>
-                <div class="commentFlex">
-                  <div class="imgBox imgBox1">
-                    <!-- <img
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&family=Tulpen+One&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/0da7d04abe.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./bar-final-assets/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./bar-final-assets/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./bar-final-assets/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+	</head>
+	<body class="blogBody">
+		<div class="outerWrapper">
+			<header class="blogHeader">
+				<div class="headerContent">
+					<div class="burgerMenu">
+						<i class="fas fa-bars"></i>
+					</div>
+					<nav class="topBar">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a class="logo" href="#">Bar-One</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+					<div class="features">
+						<h2>Blog</h2>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="wrapper mainFlex">
+					<aside>
+						<div class="imgBox">
+							<img
+								src="./bar-final-assets/sidebar-image.jpg"
+								alt="A pint of lager being poured."
+							/>
+						</div>
+						<div class="textBoxesContainer">
+							<div class="textBox ourMission">
+								<h2>Our mission</h2>
+								<p>
+									Nam dopibus nisl vitae elit fringilla rutrum. Aenean
+									sollicitudin, erat a elementum.
+								</p>
+								<a href="#">Find out more.</a>
+							</div>
+							<div class="textBox recentPosts">
+								<h2>Recent posts</h2>
+								<ul>
+									<li><a href="#">Donec fascilisis tortar ut</a></li>
+									<li><a href="#">Augue lacinia at vlverra</a></li>
+									<li><a href="#">Semper sed sapien metus</a></li>
+									<li><a href="#">Scelerisque nec pharetra</a></li>
+								</ul>
+							</div>
+						</div>
+					</aside>
+					<div class="mainContent">
+						<section class="menuSection">
+							<div class="menuContent">
+								<div class="imgBox">
+									<img
+										src="./bar-final-assets/post-image.jpg"
+										alt="Freshly made dishes which include salad, garlic bread and soup served in white plates."
+									/>
+								</div>
+								<div class="wrapper textBox">
+									<h2>New Menu!</h2>
+									<h3 class="dateText">
+										<time datetime="2020-01-30"> Monday January 30, 2020 </time>
+										by Saran
+									</h3>
+									<p>
+										Curobitur lobortis id lorem id bibendum. Ut id consectetur
+										magna. Quisque volutpat ougue enim, pulvinar lobortis nibh
+										lacinia at. Vestibulum nec erat ut mi sallicitudin
+									</p>
+									<p>
+										Curobitur lobortis id lorem id bibendum. Ut id consectetur
+										magna. Quisque Volupot
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Delectus in, corporis reprehenderit voluptatibus voluptas
+										praesentium quas maxime asperiores quam dolores ratione,
+										temporibus magnam! Facilis, dolorum quia. Dolorum accusamus,
+										aspernatur voluptate asperiores aut enim atque, fuga veniam
+										ipsam tempora error perferendis qui quam quas nihil delectus
+										porro? Eveniet at ut consequatur porro commodi suscipit
+										vitae natus sit tempore. Omnis, fugit accusamus?
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Quae nisi, fugit placeat nobis nihil earum veniam iusto!
+										Vitae neque quae aspernatur veritatis aperiam non pariatur!
+									</p>
+								</div>
+							</div>
+						</section>
+						<section class="commentsSection">
+							<h2>Comments:</h2>
+							<div class="commentFlex">
+								<div class="imgBox imgBox1">
+									<!-- <img
                       src="./bar-final-assets/comment-image-1.jpg"
                       alt="Lady in a white top."
                     /> -->
-                  </div>
-                  <div class="textBox">
-                    <h3 class="dateText"><time datetime="2020-10-09">
-                      Tuesday October 9th, 2020
-                    </time> by Sulaire</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, omnis
-                      minus maxime a tenetur quisquam voluptatum repellat architecto,
-                      fugiat commodi corrupti! Harum porro deleniti accusamus distinctio
-                      voluptatum quo labore impedit?
-                    </p>
-                  </div>
-                </div>
-                <div class="commentFlex">
-                  <div class="imgBox imgBox2">
-                    <!-- <img
+								</div>
+								<div class="textBox">
+									<h3 class="dateText">
+										<time datetime="2020-10-09">
+											Tuesday October 9th, 2020
+										</time>
+										by Sulaire
+									</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+										omnis minus maxime a tenetur quisquam voluptatum repellat
+										architecto, fugiat commodi corrupti! Harum porro deleniti
+										accusamus distinctio voluptatum quo labore impedit?
+									</p>
+								</div>
+							</div>
+							<div class="commentFlex">
+								<div class="imgBox imgBox2">
+									<!-- <img
                       src="./bar-final-assets/comment-image-2.jpg"
                       alt="Lady in a white top."
                     /> -->
-                  </div>
-                  <div class="textBox">
-                    <h3 class="dateText">Wednesday October 10th, 2020 by Renzo</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, omnis
-                      minus maxime a tenetur quisquam voluptatum repellat architecto,
-                      fugiat commodi corrupti! Harum porro deleniti accusamus
-                    </p>
-                  </div>
-                </div>
-              </section>
-              <section class="formSection">
-                <form action="submit">
-                  <div class="userNameBox">
-                    <label for="userName">Name</label>
-                    <input type="text" name="userName" id="userName" />
-                  </div>
-                  <div class="userEmailBox">
-                    <label for="userEmail">Email address</label>
-                    <input type="email" name="userEmail" id="userEmail" />
-                  </div>
-                  <textarea
-                    name="userComments"
-                    id="userComments"
-                    placeholder="Comment"
-                  ></textarea>
-                  <button type="submit">Post Comment</button>
-                </form>
-              </section>
-            </div>
-            </div>
-        </main>
-        <footer>
-          <p>Copyright &copy; 2020 HackerYou</p>
-        </footer>
-      </div>
-  </body>
+								</div>
+								<div class="textBox">
+									<h3 class="dateText">
+										Wednesday October 10th, 2020 by Renzo
+									</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+										omnis minus maxime a tenetur quisquam voluptatum repellat
+										architecto, fugiat commodi corrupti! Harum porro deleniti
+										accusamus
+									</p>
+								</div>
+							</div>
+						</section>
+						<section class="formSection">
+							<form action="submit">
+								<div class="userNameBox">
+									<label for="userName">Name</label>
+									<input type="text" name="userName" id="userName" />
+								</div>
+								<div class="userEmailBox">
+									<label for="userEmail">Email address</label>
+									<input type="email" name="userEmail" id="userEmail" />
+								</div>
+								<textarea
+									name="userComments"
+									id="userComments"
+									placeholder="Comment"
+								></textarea>
+								<button type="submit">Post Comment</button>
+							</form>
+						</section>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<p>Copyright &copy; 2020 HackerYou</p>
+			</footer>
+		</div>
+	</body>
 </html>

@@ -1,33 +1,46 @@
 nav {
-  ul {
-    // @include devBorder(orangered);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 3rem 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+	ul {
+		// @include devBorder(orangered);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin: 3rem 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
 
-  li {
-    // @include devBorder(lightblue);
-    font-size: 2.9rem;
-    letter-spacing: 1.9px;
-    line-height: 3rem;
-    margin: 0 5px;
+	li {
+		// @include devBorder(lightblue);
+		font-size: 2.9rem;
+		letter-spacing: 1.9px;
+		line-height: 3rem;
+		margin: 0 5px;
 
-    &:not(:nth-of-type(3)) {
-      text-transform: uppercase;
-    }
-  }
+		&:not(:nth-of-type(3)) {
+			text-transform: uppercase;
+		}
+	}
 
-  a {
-    // @include devBorder(yellow);
-    padding: 5px 1rem;
+	a {
+		// @include devBorder(yellow);
+		padding: 5px 1rem;
 
-    #{$aTagsHover} {
-      color: $lightAccent;
-    }
-  }
+		#{$aTagsHover} {
+			color: $lightAccent;
+		}
+	}
+}
+
+.burgerMenu {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 35px;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	background-color: rgba(202, 197, 197, 0.1);
+	width: 100vw;
+	display: none;
 }

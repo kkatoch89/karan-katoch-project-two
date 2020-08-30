@@ -30,8 +30,6 @@
 	}
 
 	.features {
-		display: table;
-		align-items: center;
 		padding: 0 0 0 6rem;
 	}
 
@@ -72,9 +70,7 @@
 			border: solid 4px $lightAccent;
 			border-right: none;
 			position: relative;
-			// top: -15rem;
 			right: -2rem;
-			// margin-bottom: -15rem;
 
 			.menuContent {
 				grid-area: menuContent;
@@ -236,10 +232,112 @@
 
 		.mainContent {
 			width: 100%;
+			top: 0;
 		}
 
-		.menuSection {
+		.menuSection,
+		aside {
 			top: 0;
+		}
+
+		aside {
+			width: 100%;
+			max-height: 500px;
+			display: flex;
+			align-items: center;
+			padding: 6rem;
+			.imgBox {
+				grid-area: imgBox;
+				position: static;
+				width: 100%;
+			}
+			.textBox {
+				margin: 0;
+				margin-left: 4rem;
+			}
+		}
+	}
+
+	@media (max-width: 700px) {
+		.features {
+			width: 100%;
+			padding: 5rem 2.5rem 0 0;
+			text-align: center;
+
+			h2 {
+				color: $lightAccent;
+				// margin: 0 auto;
+			}
+		}
+
+		aside {
+			height: 350px;
+
+			.imgBox {
+				display: none;
+			}
+
+			.textBox {
+				width: 50%;
+
+				p,
+				a {
+					font-size: 3rem;
+				}
+			}
+
+			.textBoxesContainer {
+				display: flex;
+				// width: 100%;
+			}
+		}
+
+		main {
+			h2 {
+				font-size: 6rem;
+			}
+
+			p,
+			a,
+			h3 {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	@media (max-width: 650px) {
+		form {
+			grid-template-rows: auto auto 25rem;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"userName"
+				"userEmail"
+				"userComments"
+				"btn";
+		}
+
+		.textBox.wrapper {
+			padding: 6rem 3rem;
+		}
+
+		.commentsSection {
+			padding: 0;
+		}
+
+		aside {
+			.ourMission {
+				margin: 0;
+			}
+		}
+	}
+
+	@media (max-width: 550px) {
+		nav {
+			display: none;
+		}
+
+		.burgerMenu {
+			display: block;
 		}
 	}
 }

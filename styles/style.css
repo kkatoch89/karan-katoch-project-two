@@ -584,6 +584,14 @@ html {
   font-size: 62.5%;
 }
 
+.sectionWrapper {
+  padding: 6rem;
+}
+
+.innerWrapper {
+  padding: 10%;
+}
+
 .outerWrapper {
   max-width: 1360px;
   margin: 0 auto;
@@ -784,6 +792,19 @@ nav a {
 
 nav a:active, nav a:hover {
   color: #ff8327;
+}
+
+.burgerMenu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(202, 197, 197, 0.1);
+  width: 100vw;
+  display: none;
 }
 
 .homeHeader {
@@ -1048,10 +1069,6 @@ footer p {
 }
 
 .blogBody .features {
-  display: table;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 0 0 0 6rem;
 }
 
@@ -1260,18 +1277,97 @@ footer p {
   }
   .blogBody .mainContent {
     width: 100%;
-  }
-  .blogBody .menuSection {
     top: 0;
   }
+  .blogBody .menuSection,
+  .blogBody aside {
+    top: 0;
+  }
+  .blogBody aside {
+    width: 100%;
+    max-height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 6rem;
+  }
+  .blogBody aside .imgBox {
+    grid-area: imgBox;
+    position: static;
+    width: 100%;
+  }
+  .blogBody aside .textBox {
+    margin: 0;
+    margin-left: 4rem;
+  }
 }
 
-.innerWrapper {
-  padding: 10%;
+@media (max-width: 700px) {
+  .blogBody .features {
+    width: 100%;
+    padding: 5rem 2.5rem 0 0;
+    text-align: center;
+  }
+  .blogBody .features h2 {
+    color: #ff8327;
+  }
+  .blogBody aside {
+    height: 350px;
+  }
+  .blogBody aside .imgBox {
+    display: none;
+  }
+  .blogBody aside .textBox {
+    width: 50%;
+  }
+  .blogBody aside .textBox p,
+  .blogBody aside .textBox a {
+    font-size: 3rem;
+  }
+  .blogBody aside .textBoxesContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .blogBody main h2 {
+    font-size: 6rem;
+  }
+  .blogBody main p,
+  .blogBody main a,
+  .blogBody main h3 {
+    font-size: 3rem;
+  }
 }
 
-.sectionWrapper {
-  padding: 6rem;
+@media (max-width: 650px) {
+  .blogBody form {
+    -ms-grid-rows: auto auto 25rem;
+        grid-template-rows: auto auto 25rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "userName" "userEmail" "userComments" "btn";
+  }
+  .blogBody .textBox.wrapper {
+    padding: 6rem 3rem;
+  }
+  .blogBody .commentsSection {
+    padding: 0;
+  }
+  .blogBody aside .ourMission {
+    margin: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .blogBody nav {
+    display: none;
+  }
+  .blogBody .burgerMenu {
+    display: block;
+  }
 }
 
 .contactBody {
