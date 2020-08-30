@@ -210,9 +210,6 @@
 			}
 		}
 	}
-	footer {
-		grid-area: footer;
-	}
 
 	// MEDIA QUERIES
 	@media (max-width: 1200px) {
@@ -307,13 +304,7 @@
 
 	@media (max-width: 650px) {
 		form {
-			grid-template-rows: auto auto 25rem;
-			grid-template-columns: 1fr;
-			grid-template-areas:
-				"userName"
-				"userEmail"
-				"userComments"
-				"btn";
+			@include formSmall();
 		}
 
 		.textBox.wrapper {
