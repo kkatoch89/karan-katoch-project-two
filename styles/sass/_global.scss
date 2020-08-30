@@ -1,25 +1,25 @@
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 .outerWrapper {
-  max-width: 1360px;
-  margin: 0 auto;
+	max-width: 1360px;
+	margin: 0 auto;
 }
 
 .wrapper {
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 2.5rem 0;
-  font-size: 1.8rem;
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 2.5rem 0;
+	font-size: 1.8rem;
 }
 
 .outerWrapper {
-  max-width: 1400px;
+	max-width: 1400px;
 }
 
 body {
-  background-color: rgba($backgroundColorPrimary, 0.9);
+	background-color: rgba($backgroundColorPrimary, 0.9);
 }
 
 h2,
@@ -28,27 +28,32 @@ p,
 a,
 i,
 label {
-  color: white;
-  font-family: $baseFont;
+	color: white;
+	font-family: $baseFont;
 }
 
 h2 {
-  @include subHeaderFont(6.8);
+	@include subHeaderFont(6.8);
+}
+
+header h2 {
+	@include subHeaderFont(8);
+	letter-spacing: 2.2px;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 p,
 label,
 textarea {
-  font-weight: 400;
-  font-size: 3.9rem;
-  letter-spacing: 1.9px;
-  line-height: 3rem;
+	font-weight: 400;
+	font-size: 3.9rem;
+	letter-spacing: 1.9px;
+	line-height: 3rem;
 }
 
 img {
-  width: 100%;
+	width: 100%;
 }

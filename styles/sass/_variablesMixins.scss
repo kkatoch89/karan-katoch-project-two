@@ -15,19 +15,19 @@ $aTagsHover: "&:active, &:hover";
 
 // border visualization for testing stage
 @mixin devBorder($borderColor) {
-  border: solid 1px $borderColor;
+	border: solid 1px $borderColor;
 }
 
 // font style for subtitles
 @mixin subHeaderFont($sizeValue) {
-  font-size: $sizeValue * 1rem;
-  font-family: $baseFont, sans-serif;
-  font-weight: 700;
+	font-size: $sizeValue * 1rem;
+	font-family: $baseFont, sans-serif;
+	font-weight: 700;
 }
 
 // vertical + horizontal centering w/ flexbox
 @mixin flexCenter() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

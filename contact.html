@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&family=Tulpen+One&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/0da7d04abe.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<title>Contact</title>
+	</head>
+	<body>
+		<div class="outerWrapper contactBody">
+			<header class="contactHeader">
+				<div class="innerWrapper headerContent">
+					<nav class="topBar">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a class="logo" href="#">Bar-One</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+					<div class="features">
+						<h2>Get in Touch</h2>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="innerWrapper contactMain">
+					<section class="sectionWrapper formSection">
+						<form action="submit">
+							<div class="userNameBox">
+								<label for="userName">Name</label>
+								<input type="text" name="userName" id="userName" />
+							</div>
+							<div class="userEmailBox">
+								<label for="userEmail">Email address</label>
+								<input type="email" name="userEmail" id="userEmail" />
+							</div>
+							<textarea
+								name="userComments"
+								id="userComments"
+								placeholder="Message"
+							></textarea>
+							<button type="submit">Submit</button>
+						</form>
+					</section>
+					<section class="contactInfoSection">
+						<address>
+							<ul class="socialMedia">
+								<li class="socialIcon">
+									<a href="#"><i class="fab fa-facebook-f"></i></a>
+								</li>
+								<li class="socialIcon">
+									<a href="#"><i class="fab fa-instagram"></i></a>
+								</li>
+								<li class="socialIcon">
+									<a href="#"><i class="fab fa-twitter"></i></a>
+								</li>
+								<li class="socialIcon">
+									<a href="#"><i class="fab fa-whatsapp"></i></a>
+								</li>
+							</ul>
+							<a href="#">info@email.com</a>
+							<p>
+								123-456-7890 <br />123 Queen Street West, Unit <br />
+								10 <br />
+								Toronto, Ontario <br />
+								M5V 2D5
+							</p>
+						</address>
+					</section>
+				</div>
+			</main>
+		</div>
+	</body>
+	<footer>
+		<p>Copyright &copy; 2020 HackerYou</p>
+	</footer>
+</html>

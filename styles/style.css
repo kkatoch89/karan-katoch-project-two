@@ -620,6 +620,13 @@ h2 {
   font-weight: 700;
 }
 
+header h2 {
+  font-size: 8rem;
+  font-family: "Chathura", sans-serif, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+}
+
 a {
   text-decoration: none;
 }
@@ -642,13 +649,99 @@ img {
   font-size: 4.5rem;
 }
 
-.lnk {
+.lnk,
+button {
   font-family: "Tulpen One", cursive;
   font-size: 3.8rem;
   text-transform: capitalize;
   background-color: #bf2603;
   line-height: 4rem;
   padding: 5px 5rem;
+}
+
+form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 25rem auto;
+      grid-template-rows: auto 25rem auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "userName userEmail" "userComments userComments" "btn btn";
+  gap: 4rem;
+}
+
+form label,
+form input {
+  padding-left: 3rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  color: white;
+}
+
+form .userNameBox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: userName;
+}
+
+form .userEmailBox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: userEmail;
+}
+
+form input {
+  height: 4rem;
+  border: none;
+}
+
+form textarea {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: userComments;
+  padding: 3rem;
+  resize: none;
+}
+
+form textarea::-webkit-input-placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
+}
+
+form textarea:-ms-input-placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
+}
+
+form textarea::-ms-input-placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
+}
+
+form textarea::placeholder {
+  font-family: "Chathura", sans-serif;
+  color: white;
+  opacity: 1;
+}
+
+form button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: btn;
+  color: white;
+  border: none;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 nav ul {
@@ -1062,83 +1155,20 @@ footer p {
   padding-top: 0;
 }
 
-.blog .mainFlex .mainContent form {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 30rem;
-      grid-template-rows: auto 30rem;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "userName userEmail" "userComments userComments";
-  gap: 4rem;
-}
-
-.blog .mainFlex .mainContent form label,
-.blog .mainFlex .mainContent form input {
-  padding-left: 3rem;
-}
-
 .blog .mainFlex .mainContent form input,
 .blog .mainFlex .mainContent form textarea {
-  width: 100%;
   background-color: #111010;
-  color: white;
 }
 
 .blog .mainFlex .mainContent form input {
-  height: 4rem;
-  border: none;
   border-bottom: solid 2px #ff8327;
 }
 
-.blog .mainFlex .mainContent form .userNameBox {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: userName;
-}
-
-.blog .mainFlex .mainContent form .userEmailBox {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: userEmail;
-}
-
 .blog .mainFlex .mainContent form textarea {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: userComments;
   border: solid 2px #ff8327;
-  padding: 3rem;
-  resize: none;
 }
 
-.blog .mainFlex .mainContent form textarea::-webkit-input-placeholder {
-  font-family: "Chathura", sans-serif;
-  color: white;
-  opacity: 1;
-}
-
-.blog .mainFlex .mainContent form textarea:-ms-input-placeholder {
-  font-family: "Chathura", sans-serif;
-  color: white;
-  opacity: 1;
-}
-
-.blog .mainFlex .mainContent form textarea::-ms-input-placeholder {
-  font-family: "Chathura", sans-serif;
-  color: white;
-  opacity: 1;
-}
-
-.blog .mainFlex .mainContent form textarea::placeholder {
-  font-family: "Chathura", sans-serif;
-  color: white;
-  opacity: 1;
-}
-
-.blog .mainFlex aside {
+.blog aside {
   background-color: #220303;
   width: 380px;
   height: 900px;
@@ -1147,22 +1177,156 @@ footer p {
   left: 5rem;
 }
 
-.blog .mainFlex aside .imgBox {
+.blog aside .imgBox {
   width: 420px;
   position: relative;
   top: -2rem;
   left: -7rem;
 }
 
-.blog .mainFlex aside .textBox {
+.blog aside p {
+  margin-bottom: 1rem;
+}
+
+.blog aside a {
+  line-height: 3rem;
+}
+
+.blog aside .textBox {
   margin: 2.5rem;
 }
 
-.blog .mainFlex aside ul {
-  list-style: initial;
+.blog aside .textBox a:first-of-type:hover, .blog aside .textBox a:first-of-type:focus {
+  color: white;
 }
 
-.blog .mainFlex footer {
+.blog aside ul {
+  list-style: none;
+}
+
+.blog aside ul a {
+  color: white;
+}
+
+.blog aside ul a:hover, .blog aside ul a:focus {
+  color: #ff8327;
+}
+
+.blog aside ul a:hover:before, .blog aside ul a:focus:before {
+  color: white;
+  font-size: 3rem;
+}
+
+.blog aside ul li {
+  padding-left: 2rem;
+  position: relative;
+}
+
+.blog aside ul li::before {
+  content: "\2022";
+  color: #bf2603;
+  font-weight: 700;
+  line-height: 3rem;
+  display: inline-block;
+  width: 1em;
+  position: absolute;
+  left: -5px;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+.innerWrapper {
+  padding: 10%;
+}
+
+.sectionWrapper {
+  padding: 6rem;
+}
+
+.contactBody {
+  height: 100vh;
+}
+
+.contactBody .contactHeader {
+  border: solid 1px royalBlue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50vh;
+  background-image: url(../../bar-final-assets/contact-header-1.jpg);
+  background-size: cover;
+}
+
+.contactBody .contactMain {
+  border: solid 1px yellow;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactBody .formSection {
+  width: 65%;
+  background-color: #220303;
+  -webkit-box-shadow: 2.2rem 2.2rem 0px 0px #ff8327;
+  box-shadow: 2.2rem 2.2rem 0px 0px #ff8327;
+  position: relative;
+  top: -15rem;
+}
+
+.contactBody .formSection input,
+.contactBody .formSection textarea {
+  background-color: #220303;
+}
+
+.contactBody .formSection input {
+  border-bottom: solid 2px white;
+}
+
+.contactBody .formSection textarea {
+  border: solid 2px white;
+}
+
+.contactBody .contactInfoSection {
+  width: 30%;
+  font-weight: 400;
+  font-size: 3.9rem;
+  letter-spacing: 1.9px;
+  line-height: 3rem;
+}
+
+.contactBody .contactInfoSection .socialMedia {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactBody .contactInfoSection .socialMedia a {
+  font-size: 2rem;
+}
+
+.contactBody footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;

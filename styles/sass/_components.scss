@@ -1,13 +1,72 @@
 .logo {
-  font-family: "Tulpen One", cursive;
-  font-size: 4.5rem;
+	font-family: "Tulpen One", cursive;
+	font-size: 4.5rem;
 }
 
-.lnk {
-  font-family: "Tulpen One", cursive;
-  font-size: 3.8rem;
-  text-transform: capitalize;
-  background-color: $darkAccent;
-  line-height: 4rem;
-  padding: 5px 5rem;
+.lnk,
+button {
+	font-family: "Tulpen One", cursive;
+	font-size: 3.8rem;
+	text-transform: capitalize;
+	background-color: $darkAccent;
+	line-height: 4rem;
+	padding: 5px 5rem;
+}
+
+// FORM STYLING
+form {
+	width: 100%;
+	display: grid;
+	grid-template-rows: auto 25rem auto;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"userName userEmail"
+		"userComments userComments"
+		"btn btn";
+	gap: 4rem;
+
+	label,
+	input {
+		padding-left: 3rem;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		color: white;
+	}
+
+	.userNameBox {
+		grid-area: userName;
+	}
+
+	.userEmailBox {
+		grid-area: userEmail;
+	}
+
+	input {
+		height: 4rem;
+		border: none;
+	}
+
+	textarea {
+		grid-area: userComments;
+		padding: 3rem;
+		resize: none;
+
+		&::placeholder {
+			font-family: $baseFont;
+			color: white;
+			opacity: 1;
+		}
+	}
+
+	button {
+		grid-area: btn;
+		color: white;
+		border: none;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
 }

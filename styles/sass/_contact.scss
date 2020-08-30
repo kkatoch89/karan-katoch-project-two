@@ -1,0 +1,84 @@
+.innerWrapper {
+	padding: 10%;
+}
+
+.sectionWrapper {
+	padding: 6rem;
+}
+
+.contactBody {
+	// @include devBorder(orangered);
+	height: 100vh;
+	// display: grid;
+	// grid-template-rows: 50vh 1fr auto;
+	// grid-template-areas:
+	// 	"contactHeader"
+	// 	"contactMain"
+	// 	"footer";
+
+	.contactHeader {
+		@include devBorder(royalBlue);
+		// grid-area: contactHeader;
+		display: flex;
+		align-items: center;
+		height: 50vh;
+		background-image: url(../../bar-final-assets/contact-header-1.jpg);
+		background-size: cover;
+	}
+
+	.contactMain {
+		@include devBorder(yellow);
+		// grid-area: contactMain;
+		height: 50vh;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.formSection {
+		width: 65%;
+		background-color: $backgroundColorSecondary;
+		-webkit-box-shadow: 2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+		-moz-box-shadow: 2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+		box-shadow: 2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+
+		position: relative;
+		top: -15rem;
+
+		input,
+		textarea {
+			background-color: $backgroundColorSecondary;
+		}
+
+		input {
+			border-bottom: solid 2px white;
+		}
+
+		textarea {
+			border: solid 2px white;
+		}
+	}
+
+	.contactInfoSection {
+		width: 30%;
+		font-weight: 400;
+		font-size: 3.9rem;
+		letter-spacing: 1.9px;
+		line-height: 3rem;
+
+		.socialMedia {
+			width: 150px;
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	footer {
+		grid-area: footer;
+	}
+}

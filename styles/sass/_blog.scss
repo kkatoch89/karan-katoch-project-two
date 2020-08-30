@@ -1,215 +1,247 @@
 .blog {
-  // @include devBorder(orangered);
-  background: $backgroundColorPrimary;
+	// @include devBorder(orangered);
+	background: $backgroundColorPrimary;
 
-  box-sizing: border-box;
-  // height: 500rem;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  margin: 0 auto;
+	box-sizing: border-box;
+	// height: 500rem;
+	display: grid;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	margin: 0 auto;
 
-  h2 {
-    @include subHeaderFont(8.32);
-  }
+	h2 {
+		@include subHeaderFont(8.32);
+	}
 
-  .blogHeader {
-    grid-area: header;
-    background-image: url(../../bar-final-assets/blog-header-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-  }
+	.blogHeader {
+		grid-area: header;
+		background-image: url(../../bar-final-assets/blog-header-1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 400px;
+	}
 
-  .headerContent {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
+	.headerContent {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
 
-  .features {
-    // height: 100%;
-    display: table;
-    align-items: center;
-    padding: 0 0 0 6rem;
-  }
+	.features {
+		// height: 100%;
+		display: table;
+		align-items: center;
+		padding: 0 0 0 6rem;
+	}
 
-  .mainFlex {
-    grid-area: main;
+	.mainFlex {
+		grid-area: main;
 
-    display: flex;
-    justify-content: space-between;
-    display: relative;
+		display: flex;
+		justify-content: space-between;
+		display: relative;
 
-    a,
-    .dateText {
-      font-weight: 400;
-      font-size: 3.9rem;
-      letter-spacing: 1.9px;
-      color: $lightAccent;
-    }
+		a,
+		.dateText {
+			font-weight: 400;
+			font-size: 3.9rem;
+			letter-spacing: 1.9px;
+			color: $lightAccent;
+		}
 
-    .mainContent {
-      width: 65%;
-      // padding: 3rem;
-      // position: relative;
-      // right: -2rem;
+		.mainContent {
+			width: 65%;
+			// padding: 3rem;
+			// position: relative;
+			// right: -2rem;
 
-      .textBox,
-      .commentsSection,
-      .formSection {
-        padding: 6rem;
-      }
+			.textBox,
+			.commentsSection,
+			.formSection {
+				padding: 6rem;
+			}
 
-      .menuSection {
-        display: grid;
-        grid-template-columns: 1fr 2.2rem;
-        grid-template-areas: "menuContent .";
-        border: solid 4px $lightAccent;
-        border-right: none;
-        position: relative;
-        top: -15rem;
-        right: -2rem;
-        margin-bottom: -15rem;
+			.menuSection {
+				display: grid;
+				grid-template-columns: 1fr 2.2rem;
+				grid-template-areas: "menuContent .";
+				border: solid 4px $lightAccent;
+				border-right: none;
+				position: relative;
+				top: -15rem;
+				right: -2rem;
+				margin-bottom: -15rem;
 
-        .menuContent {
-          grid-area: menuContent;
-        }
+				.menuContent {
+					grid-area: menuContent;
+				}
 
-        img {
-          position: relative;
-          right: -2.2rem;
-          top: -2.2rem;
-          -webkit-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
-          -moz-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
-          box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
-        }
-      }
+				img {
+					position: relative;
+					right: -2.2rem;
+					top: -2.2rem;
+					-webkit-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+					-moz-box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+					box-shadow: -2.2rem 2.2rem 0px 0px rgba(255, 131, 39, 1);
+				}
+			}
 
-      .commentsSection {
-        padding: 6rem 0 0 6rem;
-      }
+			.commentsSection {
+				padding: 6rem 0 0 6rem;
+			}
 
-      .commentFlex {
-        display: flex;
-        justify-content: space-between;
+			.commentFlex {
+				display: flex;
+				justify-content: space-between;
 
-        .textBox {
-          padding-top: 0;
-          padding-left: 2rem;
-          width: 100%;
+				.textBox {
+					padding-top: 0;
+					padding-left: 2rem;
+					width: 100%;
 
-          h3 {
-            display: inline-block;
-            vertical-align: top;
-          }
-        }
+					h3 {
+						display: inline-block;
+						vertical-align: top;
+					}
+				}
 
-        .imgBox1 {
-          background: url(../../bar-final-assets/comment-image-1.jpg);
-        }
+				.imgBox1 {
+					background: url(../../bar-final-assets/comment-image-1.jpg);
+				}
 
-        .imgBox2 {
-          background: url(../../bar-final-assets/comment-image-2.jpg);
-        }
+				.imgBox2 {
+					background: url(../../bar-final-assets/comment-image-2.jpg);
+				}
 
-        .imgBox {
-          width: 10rem;
-          height: 10rem;
-          margin: 1rem 0 1rem 0;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-      }
+				.imgBox {
+					width: 10rem;
+					height: 10rem;
+					margin: 1rem 0 1rem 0;
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+			}
 
-      .formSection {
-        padding-top: 0;
-      }
+			.formSection {
+				padding-top: 0;
+			}
 
-      form {
-        width: 100%;
-        display: grid;
-        grid-template-rows: auto 30rem;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "userName userEmail"
-          "userComments userComments";
-        gap: 4rem;
-        // row-gap: 2rem;
+			form {
+				// width: 100%;
+				// display: grid;
+				// grid-template-rows: auto 30rem;
+				// grid-template-columns: 1fr 1fr;
+				// grid-template-areas:
+				//   "userName userEmail"
+				//   "userComments userComments";
+				// gap: 4rem;
+				// // row-gap: 2rem;
 
-        label,
-        input {
-          padding-left: 3rem;
-        }
+				input,
+				textarea {
+					background-color: $backgroundColorPrimary;
+				}
 
-        input,
-        textarea {
-          width: 100%;
-          background-color: $backgroundColorPrimary;
-          color: white;
-        }
+				input {
+					border-bottom: solid 2px $lightAccent;
+				}
 
-        input {
-          height: 4rem;
-          border: none;
-          border-bottom: solid 2px $lightAccent;
-        }
+				// .userNameBox {
+				//   grid-area: userName;
+				// }
 
-        .userNameBox {
-          grid-area: userName;
-        }
+				// .userEmailBox {
+				//   grid-area: userEmail;
+				// }
 
-        .userEmailBox {
-          grid-area: userEmail;
-        }
+				textarea {
+					border: solid 2px $lightAccent;
+				}
 
-        textarea {
-          grid-area: userComments;
-          border: solid 2px $lightAccent;
-          padding: 3rem;
-          resize: none;
+				//   &::placeholder {
+				//     font-family: $baseFont;
+				//     color: white;
+				//     opacity: 1;
+				//   }
+			}
+		}
+	}
 
-          &::placeholder {
-            font-family: $baseFont;
-            color: white;
-            opacity: 1;
-          }
-        }
-      }
-    }
+	aside {
+		background-color: $backgroundColorSecondary;
+		// margin: 0 3rem;
+		// display: grid;
 
-    aside {
-      background-color: $backgroundColorSecondary;
-      // margin: 0 3rem;
-      // display: grid;
+		width: 380px;
+		height: 900px;
+		position: relative;
+		top: 10rem;
+		left: 5rem;
 
-      width: 380px;
-      height: 900px;
-      position: relative;
-      top: 10rem;
-      left: 5rem;
+		.imgBox {
+			width: 420px;
+			position: relative;
+			top: -2rem;
+			left: -7rem;
+		}
 
-      .imgBox {
-        width: 420px;
-        position: relative;
-        top: -2rem;
-        left: -7rem;
-      }
+		p {
+			margin-bottom: 1rem;
+		}
 
-      .textBox {
-        margin: 2.5rem;
-      }
+		a {
+			line-height: 3rem;
+		}
 
-      ul {
-        list-style: initial;
-        // white-space: nowrap;
-      }
-    }
+		.textBox {
+			margin: 2.5rem;
 
-    footer {
-      grid-area: footer;
-    }
-  }
+			& a:first-of-type {
+				&:hover,
+				&:focus {
+					color: white;
+				}
+			}
+		}
+
+		ul {
+			list-style: none;
+
+			a {
+				color: white;
+
+				&:hover,
+				&:focus {
+					color: $lightAccent;
+
+					&:before {
+						color: white;
+						font-size: 3rem;
+					}
+				}
+			}
+
+			li {
+				padding-left: 2rem;
+				position: relative;
+
+				&::before {
+					content: "\2022";
+					color: $darkAccent;
+					font-weight: 700;
+					line-height: 3rem;
+					display: inline-block;
+					width: 1em;
+					position: absolute;
+					left: -5px;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	grid-area: footer;
 }
