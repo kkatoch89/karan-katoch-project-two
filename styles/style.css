@@ -667,6 +667,12 @@ button {
   padding: 5px 5rem;
 }
 
+.lnk:active, .lnk:hover,
+button:active,
+button:hover {
+  background-color: #8d1c02;
+}
+
 form {
   width: 100%;
   display: -ms-grid;
@@ -809,7 +815,7 @@ nav a:active, nav a:hover {
 
 .homeHeader {
   position: relative;
-  height: 100vh;
+  height: 95vh;
 }
 
 .homeHeader .headerContent {
@@ -922,12 +928,7 @@ nav a:active, nav a:hover {
   padding: 0;
 }
 
-.homeBody .planLocationsSection .contentContainer {
-  border: solid 1px orangered;
-}
-
 .homeBody .planLocationsSection .contentBox {
-  border: solid 1px royalblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -943,8 +944,33 @@ nav a:active, nav a:hover {
   width: 45%;
 }
 
+.homeBody .planLocationsSection .imgBox {
+  background-color: #ff8327;
+  position: relative;
+}
+
+.homeBody .planLocationsSection .imgBox img {
+  position: relative;
+}
+
 .homeBody .planLocationsSection .planBox {
   margin: 0 auto 3rem;
+}
+
+.homeBody .planLocationsSection .planBox img {
+  top: -2.3rem;
+  left: -2.3rem;
+  -webkit-box-shadow: 2.3rem 2.3rem 0 #ff8327;
+  box-shadow: 2.3rem 2.3rem 0 #ff8327;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in;
+  transition: -webkit-box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s ease-in, -webkit-box-shadow 0.5s ease-in;
+}
+
+.homeBody .planLocationsSection .planBox img:hover, .homeBody .planLocationsSection .planBox img:focus {
+  -webkit-box-shadow: calc($imgOffset * 50%) calc($imgOffset * 50%) 0 #f36800;
+  box-shadow: calc($imgOffset * 50%) calc($imgOffset * 50%) 0 #f36800;
 }
 
 .homeBody .planLocationsSection .locationsBox {
@@ -959,25 +985,15 @@ nav a:active, nav a:hover {
   text-align: left;
 }
 
-.homeBody .planLocationsSection .imgBox {
-  border: solid 1px yellow;
-  background-color: #ff8327;
-  position: relative;
-  top: 5rem;
-}
-
-.homeBody .planLocationsSection .imgBox img {
-  position: relative;
-}
-
-.homeBody .planLocationsSection .planBox img {
-  top: -2.3rem;
-  left: -2.3rem;
-}
-
 .homeBody .planLocationsSection .locationsBox img {
   top: -2.3rem;
   right: -2.3rem;
+  -webkit-box-shadow: -2.3rem 2.3rem 0 #ff8327;
+  box-shadow: -2.3rem 2.3rem 0 #ff8327;
+}
+
+.homeBody .planLocationsSection .locationsBox .imgBox {
+  top: 4.6rem;
 }
 
 .homeBody .hostPartySection {
@@ -1039,18 +1055,50 @@ nav a:active, nav a:hover {
 }
 
 .homeBody .gallerySection li {
+  position: relative;
   overflow: hidden;
 }
 
-.homeBody .gallerySection li img {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.homeBody .gallerySection li .jokes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: black;
+  -webkit-transition: visibility 0.5s, opacity 0.5s;
+  transition: visibility 0.5s, opacity 0.5s;
+  z-index: 10;
 }
 
-.homeBody .gallerySection li:active, .homeBody .gallerySection li:hover img {
+.homeBody .gallerySection li img {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.homeBody .gallerySection li:active, .homeBody .gallerySection li:hover img, .homeBody .gallerySection li:active, .homeBody .gallerySection li:hover h2 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  opacity: 0.7;
+  opacity: 1;
+  visibility: visible;
 }
 
 footer {

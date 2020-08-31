@@ -11,6 +11,10 @@ button {
 	background-color: $darkAccent;
 	line-height: 4rem;
 	padding: 5px 5rem;
+
+	#{$aTagsHover} {
+		background-color: darken($darkAccent, 10%);
+	}
 }
 
 // FORM STYLING

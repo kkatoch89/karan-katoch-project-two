@@ -66,12 +66,7 @@
 			padding: 0;
 		}
 
-		.contentContainer {
-			@include devBorder(orangered);
-		}
-
 		.contentBox {
-			@include devBorder(royalblue);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -81,8 +76,34 @@
 			}
 		}
 
+		.imgBox {
+			background-color: $lightAccent;
+			position: relative;
+
+			img {
+				position: relative;
+			}
+		}
+
 		.planBox {
 			margin: 0 auto 3rem;
+
+			img {
+				top: -$imgOffset;
+				left: -$imgOffset;
+				@include boxShadow($imgOffset, $imgOffset, $lightAccent);
+				transition: box-shadow 0.5s ease-in;
+
+				&:hover,
+				&:focus {
+					$imgOffsetHover: calc($imgOffset * 50%);
+					@include boxShadow(
+						$imgOffsetHover,
+						$imgOffsetHover,
+						darken($lightAccent, 10%)
+					);
+				}
+			}
 		}
 
 		.locationsBox {
@@ -92,27 +113,16 @@
 			p {
 				text-align: left;
 			}
-		}
-
-		.imgBox {
-			@include devBorder(yellow);
-			background-color: $lightAccent;
-			position: relative;
-			top: 5rem;
 
 			img {
-				position: relative;
+				top: -$imgOffset;
+				right: -$imgOffset;
+				@include boxShadow(-$imgOffset, $imgOffset, $lightAccent);
 			}
-		}
 
-		.planBox img {
-			top: -$imgOffset;
-			left: -$imgOffset;
-		}
-
-		.locationsBox img {
-			top: -$imgOffset;
-			right: -$imgOffset;
+			.imgBox {
+				top: 2 * $imgOffset;
+			}
 		}
 	}
 
@@ -173,15 +183,37 @@
 		}
 
 		li {
+			position: relative;
 			overflow: hidden;
 
-			img {
-				transition: all 0.5s ease;
+			.jokes {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				visibility: hidden;
+				opacity: 0;
+				background: rgba(#000, 0.5);
+				color: black;
+				transition: visibility 0.5s, opacity 0.5s;
+				z-index: 10;
 			}
 
-			#{$aTagsHover} img {
+			img {
+				transition-property: transform, opacity;
+				transition-duration: 0.5s;
+				transition-timing-function: ease-in;
+			}
+
+			#{$aTagsHover} img,
+			#{$aTagsHover} h2 {
 				transform: scale(1.2);
-				opacity: 0.7;
+				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}

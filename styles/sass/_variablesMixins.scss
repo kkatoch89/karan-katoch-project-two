@@ -21,6 +21,13 @@ $imgOffset: 2.3rem;
 	border: solid 1px $borderColor;
 }
 
+// image box-shadow for offset effect
+@mixin boxShadow($top, $left, $color) {
+	-webkit-box-shadow: $top $left 0 $color;
+	-moz-box-shadow: $top $left 0 $color;
+	box-shadow: $top $left 0 $color;
+}
+
 // font style for subtitles
 @mixin subHeaderFont($sizeValue) {
 	font-size: $sizeValue * 1rem;
