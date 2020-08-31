@@ -1289,6 +1289,10 @@ footer p {
   line-height: 4.5rem;
 }
 
+footer a {
+  font-size: 3.9rem;
+}
+
 .blogBody .outerWrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
