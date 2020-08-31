@@ -819,7 +819,7 @@ nav a:active, nav a:hover {
 
 .homeHeader {
   position: relative;
-  height: 95vh;
+  height: 100vh;
 }
 
 .homeHeader .headerContent {
@@ -857,7 +857,6 @@ nav a:active, nav a:hover {
   text-align: center;
   text-align: left;
   z-index: 10;
-  padding-top: 4rem;
 }
 
 .homeHeader .offsetImg {
@@ -1249,8 +1248,17 @@ nav a:active, nav a:hover {
   .homeBody .planLocationsSection .locationsBox .imgBox {
     padding-right: 3rem;
   }
+  .homeBody .hostPartySection {
+    padding: 0;
+  }
+  .homeBody .hostPartySection .contentContainer {
+    width: 95%;
+  }
   .homeBody .eventsSection {
     padding: 0;
+  }
+  .homeBody .eventsSection .textBox {
+    width: 95%;
   }
   .homeBody .eventsSection .contentContainer {
     -webkit-box-orient: vertical;
