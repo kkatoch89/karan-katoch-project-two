@@ -1273,7 +1273,6 @@ nav a:active, nav a:hover {
 }
 
 footer {
-  height: 4.5rem;
   text-align: center;
   background-color: #2c2c2c;
 }
@@ -1567,18 +1566,12 @@ footer p {
   .blogBody aside .textBox a {
     font-size: 3rem;
   }
-  .blogBody aside .textBoxesContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .blogBody main h2 {
     font-size: 6rem;
   }
   .blogBody main p,
-  .blogBody main a,
-  .blogBody main h3 {
-    font-size: 3rem;
+  .blogBody main a {
+    font-size: calc(2rem + 1vw);
   }
 }
 
@@ -1636,6 +1629,9 @@ footer p {
   .blogBody a {
     font-size: 2.5rem;
   }
+  .blogBody button {
+    padding: 5px 3rem;
+  }
   .blogBody aside {
     height: 100%;
     padding: 6rem 0;
@@ -1648,6 +1644,7 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 3rem 2rem;
   }
   .blogBody aside .recentPosts {
     margin: 0;
@@ -1673,7 +1670,8 @@ footer p {
     margin-left: 2rem;
   }
   .blogBody aside .textBoxesContainer {
-    padding: 0 6rem;
+    padding: 0;
+    padding-left: 4rem;
   }
   .blogBody aside .textBox {
     width: 100%;
@@ -1875,6 +1873,10 @@ footer p {
   .contactBody .socialMedia {
     padding-bottom: 4rem;
   }
+}
+
+.contactBody footer a {
+  font-size: 3.9rem;
 }
 
 @media (max-width: 550px) {

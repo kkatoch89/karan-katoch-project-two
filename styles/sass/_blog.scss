@@ -275,9 +275,10 @@
 				}
 			}
 
-			.textBoxesContainer {
-				display: flex;
-			}
+			// .textBoxesContainer {
+			// 	display: flex;
+			// 	padding: 0;
+			// }
 		}
 
 		main {
@@ -286,9 +287,8 @@
 			}
 
 			p,
-			a,
-			h3 {
-				font-size: 3rem;
+			a {
+				font-size: calc(2rem + 1vw);
 			}
 		}
 	}
@@ -327,6 +327,10 @@
 			font-size: 2.5rem;
 		}
 
+		button {
+			padding: 5px 3rem;
+		}
+
 		aside {
 			height: 100%;
 			padding: 6rem 0;
@@ -334,6 +338,7 @@
 			.textBoxesContainer {
 				flex-direction: column;
 				align-items: center;
+				padding: 3rem 2rem;
 			}
 
 			.recentPosts {
@@ -363,7 +368,8 @@
 
 		aside {
 			.textBoxesContainer {
-				padding: 0 6rem;
+				padding: 0;
+				padding-left: 4rem;
 			}
 			.textBox {
 				width: 100%;
