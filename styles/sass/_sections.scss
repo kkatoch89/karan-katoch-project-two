@@ -92,17 +92,10 @@
 				top: -$imgOffset;
 				left: -$imgOffset;
 				@include boxShadow($imgOffset, $imgOffset, $lightAccent);
-				transition: box-shadow 0.5s ease-in;
+			}
 
-				&:hover,
-				&:focus {
-					$imgOffsetHover: calc($imgOffset * 50%);
-					@include boxShadow(
-						$imgOffsetHover,
-						$imgOffsetHover,
-						darken($lightAccent, 10%)
-					);
-				}
+			.textBox {
+				padding-right: 6rem;
 			}
 		}
 
@@ -112,6 +105,10 @@
 
 			p {
 				text-align: left;
+			}
+
+			.textBox {
+				padding-left: 6rem;
 			}
 
 			img {
@@ -157,12 +154,10 @@
 
 		.imgBox {
 			width: 25%;
-			background-color: $lightAccent;
+			// background-color: $lightAccent;
 
 			img {
-				position: relative;
-				top: -$imgOffset;
-				right: -$imgOffset;
+				@include boxShadow(-$imgOffset, $imgOffset, $lightAccent);
 			}
 		}
 
@@ -197,9 +192,12 @@
 				right: 0;
 				visibility: hidden;
 				opacity: 0;
-				background: rgba(#000, 0.5);
-				color: black;
-				transition: visibility 0.5s, opacity 0.5s;
+				// background: rgba(#000, 0.5);
+				background-image: url(../../bar-final-assets/monkey.jpg);
+				background-size: cover;
+
+				// color: black;
+				transition: visibility 5s, opacity 3s;
 				z-index: 10;
 			}
 
@@ -210,11 +208,53 @@
 			}
 
 			#{$aTagsHover} img,
-			#{$aTagsHover} h2 {
+			#{$aTagsHover} .jokes {
 				transform: scale(1.2);
 				opacity: 1;
 				visibility: visible;
 			}
+		}
+	}
+
+	// MEDIA QUERIES
+	@media (max-width: 1200px) {
+		.planLocationsSection {
+			padding: 6rem;
+		}
+	}
+
+	@media (max-width: 900px) {
+		p,
+		a {
+			font-size: calc(1.5rem + 1.5vw);
+		}
+
+		.lnk {
+			margin: 5px 3rem;
+		}
+
+		.planLocationsSection {
+			p {
+				margin-bottom: 1rem;
+			}
+
+			.imgBog,
+			img {
+				position: static;
+			}
+		}
+
+		.eventsSection {
+			.imgBox {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	@media (max-width: 730px) {
+		.sectionWrapper {
+			padding: 2rem;
 		}
 	}
 }

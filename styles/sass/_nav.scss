@@ -25,6 +25,7 @@ nav {
 	a {
 		// @include devBorder(yellow);
 		padding: 5px 1rem;
+		transition: color 0.25s ease-out;
 
 		#{$aTagsHover} {
 			color: $lightAccent;

@@ -665,6 +665,8 @@ button {
   background-color: #bf2603;
   line-height: 4rem;
   padding: 5px 5rem;
+  -webkit-transition: background-color 0.25s ease-out;
+  transition: background-color 0.25s ease-out;
 }
 
 .lnk:active, .lnk:hover,
@@ -794,6 +796,8 @@ nav li:not(:nth-of-type(3)) {
 
 nav a {
   padding: 5px 1rem;
+  -webkit-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
 }
 
 nav a:active, nav a:hover {
@@ -958,19 +962,14 @@ nav a:active, nav a:hover {
 }
 
 .homeBody .planLocationsSection .planBox img {
-  top: -2.3rem;
-  left: -2.3rem;
-  -webkit-box-shadow: 2.3rem 2.3rem 0 #ff8327;
-  box-shadow: 2.3rem 2.3rem 0 #ff8327;
-  -webkit-transition: -webkit-box-shadow 0.5s ease-in;
-  transition: -webkit-box-shadow 0.5s ease-in;
-  transition: box-shadow 0.5s ease-in;
-  transition: box-shadow 0.5s ease-in, -webkit-box-shadow 0.5s ease-in;
+  top: -2rem;
+  left: -2rem;
+  -webkit-box-shadow: 2rem 2rem 0 #ff8327;
+  box-shadow: 2rem 2rem 0 #ff8327;
 }
 
-.homeBody .planLocationsSection .planBox img:hover, .homeBody .planLocationsSection .planBox img:focus {
-  -webkit-box-shadow: calc($imgOffset * 50%) calc($imgOffset * 50%) 0 #f36800;
-  box-shadow: calc($imgOffset * 50%) calc($imgOffset * 50%) 0 #f36800;
+.homeBody .planLocationsSection .planBox .textBox {
+  padding-right: 6rem;
 }
 
 .homeBody .planLocationsSection .locationsBox {
@@ -985,15 +984,19 @@ nav a:active, nav a:hover {
   text-align: left;
 }
 
+.homeBody .planLocationsSection .locationsBox .textBox {
+  padding-left: 6rem;
+}
+
 .homeBody .planLocationsSection .locationsBox img {
-  top: -2.3rem;
-  right: -2.3rem;
-  -webkit-box-shadow: -2.3rem 2.3rem 0 #ff8327;
-  box-shadow: -2.3rem 2.3rem 0 #ff8327;
+  top: -2rem;
+  right: -2rem;
+  -webkit-box-shadow: -2rem 2rem 0 #ff8327;
+  box-shadow: -2rem 2rem 0 #ff8327;
 }
 
 .homeBody .planLocationsSection .locationsBox .imgBox {
-  top: 4.6rem;
+  top: 4rem;
 }
 
 .homeBody .hostPartySection {
@@ -1028,13 +1031,11 @@ nav a:active, nav a:hover {
 
 .homeBody .eventsSection .imgBox {
   width: 25%;
-  background-color: #ff8327;
 }
 
 .homeBody .eventsSection .imgBox img {
-  position: relative;
-  top: -2.3rem;
-  right: -2.3rem;
+  -webkit-box-shadow: -2rem 2rem 0 #ff8327;
+  box-shadow: -2rem 2rem 0 #ff8327;
 }
 
 .homeBody .eventsSection .textBox {
@@ -1076,10 +1077,10 @@ nav a:active, nav a:hover {
   right: 0;
   visibility: hidden;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: black;
-  -webkit-transition: visibility 0.5s, opacity 0.5s;
-  transition: visibility 0.5s, opacity 0.5s;
+  background-image: url(../../bar-final-assets/monkey.jpg);
+  background-size: cover;
+  -webkit-transition: visibility 5s, opacity 3s;
+  transition: visibility 5s, opacity 3s;
   z-index: 10;
 }
 
@@ -1094,11 +1095,48 @@ nav a:active, nav a:hover {
           transition-timing-function: ease-in;
 }
 
-.homeBody .gallerySection li:active, .homeBody .gallerySection li:hover img, .homeBody .gallerySection li:active, .homeBody .gallerySection li:hover h2 {
+.homeBody .gallerySection li:active, .homeBody .gallerySection li:hover img, .homeBody .gallerySection li:active, .homeBody .gallerySection li:hover .jokes {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 1200px) {
+  .homeBody .planLocationsSection {
+    padding: 6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .homeBody p,
+  .homeBody a {
+    font-size: calc(1.5rem + 1.5vw);
+  }
+  .homeBody .lnk {
+    margin: 5px 3rem;
+  }
+  .homeBody .planLocationsSection p {
+    margin-bottom: 1rem;
+  }
+  .homeBody .planLocationsSection .imgBog,
+  .homeBody .planLocationsSection img {
+    position: static;
+  }
+  .homeBody .eventsSection .imgBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 730px) {
+  .homeBody .sectionWrapper {
+    padding: 2rem;
+  }
 }
 
 footer {
