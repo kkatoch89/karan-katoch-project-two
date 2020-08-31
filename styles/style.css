@@ -867,6 +867,31 @@ nav a:active, nav a:hover {
   right: 0;
 }
 
+@media (max-width: 900px) {
+  .homeHeader .offsetImg {
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeHeader h1 {
+    font-size: 20rem;
+  }
+  .homeHeader h3 {
+    font-size: 6rem;
+    padding-top: 2rem;
+  }
+  .homeHeader nav {
+    display: none;
+  }
+  .homeHeader .burgerMenu {
+    display: block;
+  }
+  .homeHeader .offsetImg {
+    display: none;
+  }
+}
+
 .homeBody section h2 {
   font-size: 5.8rem;
   font-family: "Chathura", sans-serif, sans-serif;
@@ -949,7 +974,6 @@ nav a:active, nav a:hover {
 }
 
 .homeBody .planLocationsSection .imgBox {
-  background-color: #ff8327;
   position: relative;
 }
 
@@ -1033,7 +1057,7 @@ nav a:active, nav a:hover {
   width: 25%;
 }
 
-.homeBody .eventsSection .imgBox img {
+.homeBody .eventsSection img {
   -webkit-box-shadow: -2rem 2rem 0 #ff8327;
   box-shadow: -2rem 2rem 0 #ff8327;
 }
@@ -1050,9 +1074,28 @@ nav a:active, nav a:hover {
 .homeBody .gallerySection .gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: auto-fill(200px, 1fr);
+      grid-template-columns: auto-fill(200px, 1fr);
+      grid-template-areas: "img1 img2 img3";
   gap: 3rem;
+}
+
+.homeBody .gallerySection .img1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img1;
+}
+
+.homeBody .gallerySection .img2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img2;
+}
+
+.homeBody .gallerySection .img3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: img3;
 }
 
 .homeBody .gallerySection li {
@@ -1111,15 +1154,16 @@ nav a:active, nav a:hover {
 @media (max-width: 900px) {
   .homeBody p,
   .homeBody a {
-    font-size: calc(1.5rem + 1.5vw);
+    font-size: calc(2rem + 1vw);
   }
   .homeBody .lnk {
-    margin: 5px 3rem;
+    margin: 5px 0;
+    padding: 5px 3rem;
   }
   .homeBody .planLocationsSection p {
     margin-bottom: 1rem;
   }
-  .homeBody .planLocationsSection .imgBog,
+  .homeBody .planLocationsSection .imgBox,
   .homeBody .planLocationsSection img {
     position: static;
   }
@@ -1136,6 +1180,95 @@ nav a:active, nav a:hover {
 @media (max-width: 730px) {
   .homeBody .sectionWrapper {
     padding: 2rem;
+  }
+  .homeBody .planLocationsSection .locationsBox .textBox,
+  .homeBody .planLocationsSection .planBox .textBox {
+    padding: 0;
+    text-align: center;
+  }
+  .homeBody .planLocationsSection .planBox img {
+    -webkit-box-shadow: 1rem 1rem 0 #ff8327;
+    box-shadow: 1rem 1rem 0 #ff8327;
+  }
+  .homeBody .planLocationsSection .locationsBox img {
+    -webkit-box-shadow: -1rem -1rem 0 #ff8327;
+    box-shadow: -1rem -1rem 0 #ff8327;
+  }
+  .homeBody .eventsSection .imgBox img {
+    -webkit-box-shadow: -1rem 1rem 0 #ff8327;
+    box-shadow: -1rem 1rem 0 #ff8327;
+  }
+  .homeBody .gallerySection .gallery {
+        grid-template-areas: "img2 img3" "img1 img1";
+  }
+}
+
+@media (max-width: 600px) {
+  .homeBody .sectionWrapper {
+    padding: 6rem 0;
+  }
+  .homeBody .outerWrapper {
+    padding: 0;
+  }
+  .homeBody .servicesSection {
+    padding: 0;
+  }
+  .homeBody .servicesContainer {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .homeBody .planLocationsSection {
+    padding: 6rem 0;
+  }
+  .homeBody .planLocationsSection .contentBox > [class$="Box"] {
+    width: 95%;
+  }
+  .homeBody .planLocationsSection .planBox,
+  .homeBody .planLocationsSection .locationsBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .homeBody .planLocationsSection .textBox h2,
+  .homeBody .planLocationsSection .textBox p {
+    text-align: center;
+  }
+  .homeBody .planLocationsSection .imgBox,
+  .homeBody .planLocationsSection img {
+    margin: 2rem 0 0;
+    position: static;
+  }
+  .homeBody .planLocationsSection .planBox .imgBox {
+    padding-left: 3rem;
+  }
+  .homeBody .planLocationsSection .locationsBox .imgBox {
+    padding-right: 3rem;
+  }
+  .homeBody .eventsSection {
+    padding: 0;
+  }
+  .homeBody .eventsSection .contentContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .homeBody .eventsSection .imgBox {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .homeBody .gallerySection .gallery {
+        grid-template-areas: "img1" "img2" "img3";
   }
 }
 

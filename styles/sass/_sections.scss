@@ -13,16 +13,13 @@
 
 	// SERVICES SECTION (1ST)
 	.servicesSection {
-		// padding: 10rem 0;
 		.servicesContainer {
-			// @include devBorder(lightblue);
 			display: flex;
 			flex-wrap: wrap;
 		}
 	}
 
 	.serviceBox {
-		// @include devBorder(yellow);
 		flex-basis: 50%;
 		display: flex;
 		position: relative;
@@ -77,7 +74,6 @@
 		}
 
 		.imgBox {
-			background-color: $lightAccent;
 			position: relative;
 
 			img {
@@ -154,11 +150,10 @@
 
 		.imgBox {
 			width: 25%;
-			// background-color: $lightAccent;
+		}
 
-			img {
-				@include boxShadow(-$imgOffset, $imgOffset, $lightAccent);
-			}
+		img {
+			@include boxShadow(-$imgOffset, $imgOffset, $lightAccent);
 		}
 
 		.textBox {
@@ -173,8 +168,21 @@
 
 		.gallery {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: auto-fill(200px, 1fr);
+			grid-template-areas: "img1 img2 img3";
 			gap: 3rem;
+		}
+
+		.img1 {
+			grid-area: img1;
+		}
+
+		.img2 {
+			grid-area: img2;
+		}
+
+		.img3 {
+			grid-area: img3;
 		}
 
 		li {
@@ -192,11 +200,9 @@
 				right: 0;
 				visibility: hidden;
 				opacity: 0;
-				// background: rgba(#000, 0.5);
 				background-image: url(../../bar-final-assets/monkey.jpg);
 				background-size: cover;
 
-				// color: black;
 				transition: visibility 5s, opacity 3s;
 				z-index: 10;
 			}
@@ -226,11 +232,12 @@
 	@media (max-width: 900px) {
 		p,
 		a {
-			font-size: calc(1.5rem + 1.5vw);
+			font-size: calc(2rem + 1vw);
 		}
 
 		.lnk {
-			margin: 5px 3rem;
+			margin: 5px 0;
+			padding: 5px 3rem;
 		}
 
 		.planLocationsSection {
@@ -238,7 +245,7 @@
 				margin-bottom: 1rem;
 			}
 
-			.imgBog,
+			.imgBox,
 			img {
 				position: static;
 			}
@@ -255,6 +262,111 @@
 	@media (max-width: 730px) {
 		.sectionWrapper {
 			padding: 2rem;
+		}
+
+		.planLocationsSection {
+			.locationsBox,
+			.planBox {
+				.textBox {
+					padding: 0;
+					text-align: center;
+				}
+			}
+			.planBox img {
+				@include boxShadow($imgOffsetSmall, $imgOffsetSmall, $lightAccent);
+			}
+
+			.locationsBox img {
+				@include boxShadow(-$imgOffsetSmall, -$imgOffsetSmall, $lightAccent);
+			}
+		}
+
+		.eventsSection {
+			.imgBox img {
+				@include boxShadow(-$imgOffsetSmall, $imgOffsetSmall, $lightAccent);
+			}
+		}
+
+		.gallerySection {
+			.gallery {
+				grid-template-areas:
+					"img2 img3"
+					"img1 img1";
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		.sectionWrapper {
+			padding: 6rem 0;
+		}
+
+		.outerWrapper {
+			padding: 0;
+		}
+
+		.servicesSection {
+			padding: 0;
+		}
+
+		.servicesContainer {
+			// display: block;
+			flex-wrap: nowrap;
+			flex-direction: column;
+		}
+
+		.planLocationsSection {
+			padding: 6rem 0;
+
+			.contentBox > [class$="Box"] {
+				width: 95%;
+			}
+
+			.planBox,
+			.locationsBox {
+				flex-direction: column;
+			}
+
+			.textBox h2,
+			.textBox p {
+				text-align: center;
+			}
+
+			.imgBox,
+			img {
+				margin: 2rem 0 0;
+				position: static;
+			}
+
+			.planBox .imgBox {
+				padding-left: 3rem;
+			}
+
+			.locationsBox .imgBox {
+				padding-right: 3rem;
+			}
+		}
+
+		.eventsSection {
+			padding: 0;
+			.contentContainer {
+				flex-direction: column;
+				align-items: center;
+			}
+			.imgBox {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	@media (max-width: 450px) {
+		.gallerySection {
+			.gallery {
+				grid-template-areas:
+					"img1"
+					"img2"
+					"img3";
+			}
 		}
 	}
 }

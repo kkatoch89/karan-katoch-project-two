@@ -1,6 +1,5 @@
 nav {
 	ul {
-		// @include devBorder(orangered);
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -11,7 +10,6 @@ nav {
 	}
 
 	li {
-		// @include devBorder(lightblue);
 		font-size: 2.9rem;
 		letter-spacing: 1.9px;
 		line-height: 3rem;
@@ -23,7 +21,6 @@ nav {
 	}
 
 	a {
-		// @include devBorder(yellow);
 		padding: 5px 1rem;
 		transition: color 0.25s ease-out;
 

@@ -1,13 +1,6 @@
 .blogBody {
-	// @include devBorder(orangered);
 	.outerWrapper {
 		box-sizing: border-box;
-		// height: 500rem;
-		// display: grid;
-		// grid-template-areas:
-		// 	"header"
-		// 	"main"
-		// 	"footer";
 		margin: 0 auto;
 	}
 
@@ -263,7 +256,6 @@
 
 			h2 {
 				color: $lightAccent;
-				// margin: 0 auto;
 			}
 		}
 
@@ -285,7 +277,6 @@
 
 			.textBoxesContainer {
 				display: flex;
-				// width: 100%;
 			}
 		}
 
